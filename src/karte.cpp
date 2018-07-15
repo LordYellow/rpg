@@ -6,6 +6,7 @@
 #include "SDL2/SDL.h"
 #include <fstream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -15,16 +16,21 @@ karte::karte ( const char* path, SDL_Renderer* renner) {
     if(!readMap.is_open()){DEB_ERR("Could not open file")}
     string line;
     vector<tile> tv;
-    while(getline(readMap, line)){
-        for(size_t i = 0; i < line.size(); i++){
-            tv.push_back(tile("./images/test2.png", this->renner));
+    while(getline(readMap, line) && line != "end"){ 
+        //reads the file until it ends 
+        if(line.size() == 0){ //if the line is empty it will end the current "line"
+            DEB_MSG_2(_T(tv.size()) + " elements pushed in field")
+            this->field.push_back(tv);
+            DEB_MSG_2(_T(field.size()))
+            tv.clear();
+        }else{ //else it will create a new tile in the current line with the given texture
+            string s = "./images/mapimages/" + line;
+            tv.push_back(tile(s.c_str(), this->renner));
             DEB_MSG_3("Pushed Tile in Vector")
         }
-        DEB_MSG_2(_T(tv.size()) + " elements pushed in field")
-        this->field.push_back(tv);
-        DEB_MSG_2(_T(field.size()))
-        tv.clear();
+
     }
+    //the following is to center the map when drawn 
     this->mapWidth = this->field.size();
     this->mapHight = this->field[0].size();
     DEB_MSG_1(_T(this->mapWidth) + " = mapWidth")

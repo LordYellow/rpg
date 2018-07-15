@@ -12,8 +12,7 @@ int main(){
         SDL_Renderer *renner = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
         if(renner == nullptr){SDL_DestroyWindow(win); std::cout << "renderererror: " << SDL_GetError() << std::endl; SDL_Quit(); return 1;}
         SDL_Event event;
-        
-        karte k("maps/test", renner);
+        karte k("maps/map", renner);
         
         SDL_SetEventFilter(filter, NULL);
         

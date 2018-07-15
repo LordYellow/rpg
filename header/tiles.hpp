@@ -8,10 +8,14 @@ class tile{
 public:
     tile():image(NULL),texture(NULL),renner(NULL){}
     tile(const char* path, SDL_Renderer* renner);
-    SDL_Surface *image;
+    SDL_Surface *image; 
     SDL_Texture *texture;
     SDL_Renderer *renner;
     SDL_Rect dst;
+    
+    /**
+     * @brief this will draw the tile at the given position
+     */
     void draw(int x, int y);
 };
 

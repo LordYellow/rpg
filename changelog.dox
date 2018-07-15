@@ -1,9 +1,11 @@
 
-
-///15.08.18 10:27
+//14.07.18
   + Documentation
   + Todo list
   + Macros for debugging 
+
+
+///15.07.18
   + karte class
   + tile class
   + started to write down the time @12:00
@@ -12,4 +14,8 @@
   + draw in karte @13:43
   + map movable @14:15
   + map starts in mid of the window @14:45 
- 
+  ~ sucesfully fixed a bug i caused by deleting something necessary by accident @15:32
+  + map file now affects the plotted texture @16:45
+  + added comments @17:49
+  + added a "tool" to create maps @22:50 (yeah that took some time)
+///end of the day. Finished 1.

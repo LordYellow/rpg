@@ -75,16 +75,18 @@ $(function() {
 <code>#include &lt;SDL2/SDL.h&gt;</code><br />
 <code>#include &lt;SDL2/SDL_ttf.h&gt;</code><br />
 <code>#include &lt;SDL2/SDL_image.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for texture.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="texture_8hpp__incl.png" border="0" usemap="#rpg_2header_2texture_8hpp" alt=""/></div>
 <map name="rpg_2header_2texture_8hpp" id="rpg_2header_2texture_8hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="206,5,358,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="271,5,423,32"/>
 <area shape="rect" id="node2" href="rpg__definitions_8hpp.html" title=" " alt="" coords="7,80,146,107"/>
 <area shape="rect" id="node6" title=" " alt="" coords="170,80,266,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="290,80,405,107"/>
 <area shape="rect" id="node8" title=" " alt="" coords="429,80,567,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="592,80,639,107"/>
 <area shape="rect" id="node3" href="debug_8hpp.html" title=" " alt="" coords="31,155,122,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,229,60,256"/>
 <area shape="rect" id="node5" title=" " alt="" coords="85,229,157,256"/>
@@ -96,6 +98,7 @@ Include dependency graph for texture.hpp:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa0208a911b3e1bc9eedc05ca728427b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="texture_8hpp.html#aa0208a911b3e1bc9eedc05ca728427b4">renderTexture</a> (SDL_Texture *texturepointer, SDL_Renderer *renner, int x, int y)</td></tr>
+<tr class="memdesc:aa0208a911b3e1bc9eedc05ca728427b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">will draw the given texture at the given location  <a href="#aa0208a911b3e1bc9eedc05ca728427b4">More...</a><br /></td></tr>
 <tr class="separator:aa0208a911b3e1bc9eedc05ca728427b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -137,8 +140,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="texture_8hpp_source.html#l00008">8</a> of file <a class="el" href="texture_8hpp_source.html">texture.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                                                   {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  SDL_Rect dst;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  dst.x=x;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  dst.y=y;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  SDL_QueryTexture(texturepointer, NULL, NULL, &amp;dst.w, &amp;dst.h);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  SDL_RenderCopy(renner, texturepointer, NULL, &amp;dst);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
+<p>will draw the given texture at the given location </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texturepointer</td><td>is the texture you wanna draw </td></tr>
+    <tr><td class="paramname">x</td><td>is the x location </td></tr>
+    <tr><td class="paramname">y</td><td>is the y location </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="texture_8hpp_source.html#l00016">16</a> of file <a class="el" href="texture_8hpp_source.html">texture.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                                                   {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  SDL_Rect dst;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  dst.x=x;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  dst.y=y;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  SDL_QueryTexture(texturepointer, NULL, NULL, &amp;dst.w, &amp;dst.h);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  SDL_RenderCopy(renner, texturepointer, NULL, &amp;dst);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

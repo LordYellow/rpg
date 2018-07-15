@@ -10,7 +10,7 @@
 tile::tile(const char* path, SDL_Renderer* renner){
     this->renner = renner;
     this->image = IMG_Load(path);
-    DEB_MSG_2(IMG_GetError())
+    DEB_MSG_3(IMG_GetError())
     this->texture = SDL_CreateTextureFromSurface(this->renner, this->image);
 }
 
