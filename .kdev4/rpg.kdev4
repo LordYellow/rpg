@@ -1,0 +1,39 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x06\x00r\x00p\x00g)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index-Host System=0
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=/home/yellow/Documents/github/Tutorial/F/rpg/rpg/build
+Build Type=Debug
+CMake Binary=/usr/bin/cmake
+CMake Executable=/usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=
+Runtime=Host System
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=scriptAppLauncher
+Name=launch terminal
+Type=Script Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+EnvironmentGroup=
+Executable=file:///home/yellow/Documents/github/Tutorial/F/rpg/launchTerminal.sh
+Execute on Remote Host=false
+Interpreter=bash
+Output Filtering Mode=2
+Remote Host=
+Run current file=false
+Working Directory=
+
+[Project]
+VersionControlSupport=kdevgit

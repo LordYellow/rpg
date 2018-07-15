@@ -1,0 +1,20 @@
+1.
+Karte 80x60 anzeigen lassen.
+Karte besteht aus 10x10 tiles (mutig: 32x32)
+Tileloader -> texturen einer passenden landschaft
+textdatei -> karte
+
+2.
+Spieler 1 tile grosss
+ab now -> tilegroesse variabel
+Spieler kann sich bewegen. Flussig.
+2 bilder animation
+no collision
+
+3.
+collision (intelligent = partielles darauflaufen erlaubt)
+
+4.
+Baume nicht als tile, sondern extra. collidable 
+flussigkeit -> animiert
+texture ueber 2 felder. man kann hinten durch
