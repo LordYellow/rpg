@@ -1,4 +1,8 @@
 /**
+    @file changelog.dox
+    @mainpage Mainpage
+    @ref changelog
+    
     @page changelog Changelog
     @brief Its a Changelog
     @tableofcontents 
