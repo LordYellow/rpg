@@ -4,6 +4,8 @@
 #include <SDL2/SDL.h>
 #include <map>
 #include "./../src/player.cpp"
+#define SCOPE_NAME "Events"
+#include "./debug.hpp"
 
 using namespace std;
 
@@ -65,4 +67,5 @@ void events(SDL_Event* event, int* cx, int* cy, player *you){
         //SDL_FlushEvent(SDL_KEYDOWN);
 }
 
+#undef SCOPE_NAME
 #endif

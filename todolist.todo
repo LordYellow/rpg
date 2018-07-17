@@ -18,3 +18,37 @@ collision (intelligent = partielles darauflaufen erlaubt)
 Baume nicht als tile, sondern extra. collidable 
 flussigkeit -> animiert
 texture ueber 2 felder. man kann hinten durch
+
+5.
+Manager. 
+Texture loader: klasse. wird mit spielbeginn geladen. sorgt sich um alles mit grafik beschaffung. soll bei laundem spiel bei konstanen zahlen auf texturen zugreifen durfen. nur gebrauchte texturen werden geladen. soll auf big 10
+bildernamen:    general, basic, core with gerneral things 
+                enviroment, map, world with all graphics for map as tiles
+                stuff, items, creatures with all items and npcs 
+https://stackoverflow.com/questions/28023301/sdl2-trying-to-crop-a-texture-or-surface#28146420
+karte soll texture loader sagen was sie braucht
+karte soll load funktion haben
+karte soll wissen welcher ausschnitt zu sehen ist
+karte soll wissen wo der spieler teleportiert werden muss
+karte soll wissen ob sie eine kamerafahrt machen soll
+kartenformat:   kopfzeile beliebig viele zeilen bsp: [autor, datum, uhrzeit, x, y, anzahl an ziffern fuer textureid, kartenname, kartentyp als zahl (dungeon, haus, welt, uebersicht?), zeichen fuer collisions definition]
+                daten: 1011230699
+                collisions definition: ueberlegen
+                soll wissen ob map file valide ist
+                
+6.
+Spieler braucht inventar leise ->leben, ausdauer, inventar, gold, erfahrung (placeholder)
+Kamerafahrten
+
+7.
+2. Karte (wechselbar)
+Enemys (bewegen aber keine interaktion, no ai, brauchen health bar mit anzeige und namen)
+
+8.
+Optimieren
+e -> actionskey
+Npc soll rumstehen name drueber
+Npc dialog (simpel) -> bild von sprechender person
+Tippanimation 2.e -> gesamter text oder diaglog weiter wenn dialog fertig
+Tippanimation flexibel
+Text klasse

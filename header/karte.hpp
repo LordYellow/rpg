@@ -5,6 +5,9 @@
 #include <vector>
 #include <map>
 #include "../src/tiles.cpp"
+#include "./../src/obstacle.cpp"
+#define SCOPE_NAME "Karte"
+#include "./debug.hpp"
 
 class karte{
 public:
@@ -22,9 +25,12 @@ public:
          * @param cy is used to change the part you see (y direction)
          */
         void draw(int cx,  int cy);
+        void drawobstacle(int cx, int cy);
         
         // needed to draw the map in the center of the screen
         int mapWidth,  mapHight,  spx,  spy;
+        std::vector<obstacle> obstaclevector;
 };
 
+#undef SCOPE_NAME
 #endif

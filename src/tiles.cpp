@@ -6,6 +6,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <iostream>
+#define SCOPE_NAME tiles
+#include "./../header/debug.hpp"
 
 using namespace std;
 
@@ -34,4 +36,5 @@ bool tile::notwalkable(){
     return false;
 }
 
+#undef SCOPE_NAME
 #endif

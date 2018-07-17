@@ -66,21 +66,26 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">debug.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for debug.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_8hpp__incl.png" border="0" usemap="#rpg_2header_2debug_8hpp" alt=""/></div>
 <map name="rpg_2header_2debug_8hpp" id="rpg_2header_2debug_8hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="7,80,62,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="87,80,159,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="91,5,238,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="85,80,157,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,80,239,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="263,80,330,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -88,16 +93,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_8hpp__dep__incl.png" border="0" usemap="#rpg_2header_2debug_8hppdep" alt=""/></div>
 <map name="rpg_2header_2debug_8hppdep" id="rpg_2header_2debug_8hppdep">
-<area shape="rect" id="node1" title=" " alt="" coords="90,5,236,32"/>
-<area shape="rect" id="node2" href="rpg__definitions_8hpp.html" title=" " alt="" coords="65,80,261,107"/>
-<area shape="rect" id="node3" href="player_8hpp.html" title=" " alt="" coords="72,379,219,405"/>
-<area shape="rect" id="node6" href="rpg_8cpp.html" title=" " alt="" coords="132,603,218,629"/>
-<area shape="rect" id="node7" href="karte_8cpp.html" title=" " alt="" coords="155,304,275,331"/>
-<area shape="rect" id="node8" href="karte_8hpp.html" title=" " alt="" coords="175,229,316,256"/>
-<area shape="rect" id="node9" href="tiles_8cpp.html" title=" " alt="" coords="226,155,340,181"/>
-<area shape="rect" id="node10" href="texture_8hpp.html" title=" " alt="" coords="364,155,516,181"/>
-<area shape="rect" id="node4" href="player_8cpp.html" title=" " alt="" coords="82,453,209,480"/>
-<area shape="rect" id="node5" href="events_8hpp.html" title=" " alt="" coords="44,528,194,555"/>
+<area shape="rect" id="node1" title=" " alt="" coords="224,5,371,32"/>
+<area shape="rect" id="node2" href="tiles_8cpp.html" title=" " alt="" coords="19,80,133,107"/>
+<area shape="rect" id="node3" href="karte_8hpp.html" title=" " alt="" coords="76,304,217,331"/>
+<area shape="rect" id="node4" href="karte_8cpp.html" title=" " alt="" coords="108,379,228,405"/>
+<area shape="rect" id="node5" href="player_8hpp.html" title=" " alt="" coords="189,453,336,480"/>
+<area shape="rect" id="node6" href="player_8cpp.html" title=" " alt="" coords="229,528,355,555"/>
+<area shape="rect" id="node7" href="events_8hpp.html" title=" " alt="" coords="270,603,421,629"/>
+<area shape="rect" id="node9" href="obstacle_8hpp.html" title=" " alt="" coords="22,155,183,181"/>
+<area shape="rect" id="node11" href="texture_8hpp.html" title=" " alt="" coords="461,80,613,107"/>
+<area shape="rect" id="node8" href="rpg_8cpp.html" title=" " alt="" coords="189,677,275,704"/>
+<area shape="rect" id="node10" href="obstacle_8cpp.html" title=" " alt="" coords="38,229,178,256"/>
 </map>
 </div>
 </div>
@@ -105,6 +111,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a1f15293623649a310a7c68ff240f9647"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a>&#160;&#160;&#160;90</td></tr>
+<tr class="separator:a1f15293623649a310a7c68ff240f9647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7cdd2479f13caea4f771fb1c5b2f51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a>&#160;&#160;&#160;15</td></tr>
+<tr class="separator:a3c7cdd2479f13caea4f771fb1c5b2f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08a6c932380a99ff896d2b346db4369"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#aa08a6c932380a99ff896d2b346db4369">SCOPE_NAME</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa08a6c932380a99ff896d2b346db4369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f9040d03fff083de22d432a3672bbb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(s)&#160;&#160;&#160;std::string(s)</td></tr>
 <tr class="separator:a9f9040d03fff083de22d432a3672bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bd145c764f3c7360ec11574144cddc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(s)&#160;&#160;&#160;std::to_string(s)</td></tr>
@@ -183,32 +195,41 @@ Macros</h2></td></tr>
 <tr class="separator:a65938f7d27a5f8744ad9ab3b4c539901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be63890ef84d52e6893b2815bb0d9cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a0be63890ef84d52e6893b2815bb0d9cc">DEBUG_BG_WHITE</a>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a856648024f96394e557adae41e6971ba">DEBUG_SINGLE_C</a>(47)</td></tr>
 <tr class="separator:a0be63890ef84d52e6893b2815bb0d9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3df6225c8bcee82b99163807c1b2a13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#aa3df6225c8bcee82b99163807c1b2a13">YELLOWDEBUG</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:aa3df6225c8bcee82b99163807c1b2a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae73053051efbb45c3a39751f5ce9fb36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#ae73053051efbb45c3a39751f5ce9fb36">PROJECT_NAME</a>&#160;&#160;&#160;&quot;undefined&quot;</td></tr>
-<tr class="separator:ae73053051efbb45c3a39751f5ce9fb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a776fa6ea8b7bdf8dfa04ad42b46407"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a4a776fa6ea8b7bdf8dfa04ad42b46407">PROJECT_VERSION</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a4a776fa6ea8b7bdf8dfa04ad42b46407"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f12eb2841466cc0327e25123af4af4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a13f12eb2841466cc0327e25123af4af4">VALUETOSTRING</a>(x)&#160;&#160;&#160;#x</td></tr>
-<tr class="separator:a13f12eb2841466cc0327e25123af4af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad705dc78222473228fa826e42eca95f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#ad705dc78222473228fa826e42eca95f1">VALUE</a>(x)&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a13f12eb2841466cc0327e25123af4af4">VALUETOSTRING</a>(x)</td></tr>
-<tr class="separator:ad705dc78222473228fa826e42eca95f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac48ac58ca1f14396e4c4b54e40c2292f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#ac48ac58ca1f14396e4c4b54e40c2292f">PERFORMPRAGMA</a>(str)&#160;&#160;&#160;_Pragma(#str)</td></tr>
-<tr class="separator:ac48ac58ca1f14396e4c4b54e40c2292f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af438d8105a4d88218d428090f70d1571"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#af438d8105a4d88218d428090f70d1571">DEB_WAR</a>(str)</td></tr>
-<tr class="separator:af438d8105a4d88218d428090f70d1571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f39a533495a081ee6aff43c70873b45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(str)</td></tr>
-<tr class="separator:a2f39a533495a081ee6aff43c70873b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa07938bbd327f8d47de1ca96a674e9a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#aa07938bbd327f8d47de1ca96a674e9a9">P_DEB_MSG</a>(str)&#160;&#160;&#160;;</td></tr>
-<tr class="separator:aa07938bbd327f8d47de1ca96a674e9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc3e543143846837851b2d08470605d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#afc3e543143846837851b2d08470605d6">P_MAC_MSG</a>(mac,  str)&#160;&#160;&#160;;</td></tr>
-<tr class="separator:afc3e543143846837851b2d08470605d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff434e1d8bf7ffd8b2ed7c3c7a839f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a1ff434e1d8bf7ffd8b2ed7c3c7a839f1">DEBUG_FORMAT</a>(str,  len)</td></tr>
+<tr class="separator:a1ff434e1d8bf7ffd8b2ed7c3c7a839f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb00be20be8e93fdf29e8c8119ec35f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#aadb00be20be8e93fdf29e8c8119ec35f">DEB_WARS</a>(str)</td></tr>
+<tr class="separator:aadb00be20be8e93fdf29e8c8119ec35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cd783df08148109fede39c6b505fdc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a18cd783df08148109fede39c6b505fdc">DEB_ERRS</a>(str)</td></tr>
+<tr class="separator:a18cd783df08148109fede39c6b505fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8df3ee1745a5f2f932f5eae08a928035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a8df3ee1745a5f2f932f5eae08a928035">DEB_MSG_PS</a>(str)</td></tr>
+<tr class="separator:a8df3ee1745a5f2f932f5eae08a928035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36d0b1b263dfcb2f5ce0e35691e9ec94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(str)&#160;&#160;&#160;;</td></tr>
 <tr class="separator:a36d0b1b263dfcb2f5ce0e35691e9ec94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01366b64be389d7cea095ae05272f709"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a01366b64be389d7cea095ae05272f709">DEB_MSG_2</a>(str)&#160;&#160;&#160;;</td></tr>
-<tr class="separator:a01366b64be389d7cea095ae05272f709"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5852b5e64b4795d4994b9c2c8bb68874"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(str)&#160;&#160;&#160;;</td></tr>
+<tr class="memitem:a36d0b1b263dfcb2f5ce0e35691e9ec94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(str)&#160;&#160;&#160;;</td></tr>
+<tr class="separator:a36d0b1b263dfcb2f5ce0e35691e9ec94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a423199ef5e4011a3025b4d903a0cc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a0a423199ef5e4011a3025b4d903a0cc6">DEB_MSG_2S</a>(str)&#160;&#160;&#160;;</td></tr>
+<tr class="separator:a0a423199ef5e4011a3025b4d903a0cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840eb455848ee4990393606c26c5add7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a840eb455848ee4990393606c26c5add7">DEB_MSG_3S</a>(str)&#160;&#160;&#160;;</td></tr>
+<tr class="separator:a840eb455848ee4990393606c26c5add7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12cbef817116dfcf5195433fae3705e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a12cbef817116dfcf5195433fae3705e2">DEB_MSG_CS</a>(str)&#160;&#160;&#160;;</td></tr>
+<tr class="separator:a12cbef817116dfcf5195433fae3705e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af438d8105a4d88218d428090f70d1571"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#af438d8105a4d88218d428090f70d1571">DEB_WAR</a>(str)&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#aadb00be20be8e93fdf29e8c8119ec35f">DEB_WARS</a>(str)</td></tr>
+<tr class="separator:af438d8105a4d88218d428090f70d1571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f39a533495a081ee6aff43c70873b45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(str)&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a18cd783df08148109fede39c6b505fdc">DEB_ERRS</a>(str)</td></tr>
+<tr class="separator:a2f39a533495a081ee6aff43c70873b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef7548b09a91629bcd0fcb7f3ef2575"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a1ef7548b09a91629bcd0fcb7f3ef2575">DEB_MSG_C</a>(str)&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a12cbef817116dfcf5195433fae3705e2">DEB_MSG_CS</a>(str)</td></tr>
+<tr class="separator:a1ef7548b09a91629bcd0fcb7f3ef2575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5852b5e64b4795d4994b9c2c8bb68874"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(str)&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a840eb455848ee4990393606c26c5add7">DEB_MSG_3S</a>(str)</td></tr>
 <tr class="separator:a5852b5e64b4795d4994b9c2c8bb68874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01366b64be389d7cea095ae05272f709"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a01366b64be389d7cea095ae05272f709">DEB_MSG_2</a>(str)&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a0a423199ef5e4011a3025b4d903a0cc6">DEB_MSG_2S</a>(str)</td></tr>
+<tr class="separator:a01366b64be389d7cea095ae05272f709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d0b1b263dfcb2f5ce0e35691e9ec94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(str)&#160;&#160;&#160;DEB_MSG_1S(str)</td></tr>
+<tr class="separator:a36d0b1b263dfcb2f5ce0e35691e9ec94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5500e4278fe8143c46f308e07d25a5e2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a> ()</td></tr>
+<tr class="separator:a5500e4278fe8143c46f308e07d25a5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9f9040d03fff083de22d432a3672bbb8"></a>
@@ -227,7 +248,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00007">7</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00025">25</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +268,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00008">8</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00026">26</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -262,19 +283,45 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a18cd783df08148109fede39c6b505fdc">DEB_ERRS</a>(str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00148">148</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a18cd783df08148109fede39c6b505fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18cd783df08148109fede39c6b505fdc">&#9670;&nbsp;</a></span>DEB_ERRS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_ERRS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{\</div><div class="line">        std::cout &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt; <a class="code" href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a>(204,000,000) &lt;&lt; \</div><div class="line">        DEBUG_COLOR_FG_RGB(255,254,255) &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;[ERR] &quot;</span> &lt;&lt; str &lt;&lt; <span class="stringliteral">&quot; @&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;~&quot;</span> &lt;&lt; \</div><div class="line">        __FILE__ &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a>;}</div><div class="ttc" id="debug_8hpp_html_a8c173f4337670faf2ebf9a91a4b91875"><div class="ttname"><a href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a></div><div class="ttdeci">#define DEBUG_RESET</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00018">debug.hpp:18</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a28430164b5c6b3231ac03bb782cfe5b3"><div class="ttname"><a href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a></div><div class="ttdeci">#define DEBUG_COLOR_BG_RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00015">debug.hpp:15</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">      std::cout  &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt; <a class="code" href="debug_8hpp.html#ac8711a553bd7512a6083b35bf4628433">DEBUG_BOLD</a> &lt;&lt; <a class="code" href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a>(204,000,000)&lt;&lt; \</div><div class="line">      DEBUG_COLOR_FG_RGB(255,254,255)&lt;&lt; <span class="stringliteral">&quot;[ERR] &quot;</span>&lt;&lt; std::left &lt;&lt; std::setw(10)&lt;&lt;\</div><div class="line">      SCOPE_NAME &lt;&lt; <span class="stringliteral">&quot;: &quot;</span>  &lt;&lt; std::left &lt;&lt; std::setw(<a class="code" href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a>) &lt;&lt; str &lt;&lt; <a class="code" href="debug_8hpp.html#ac93dabb81c998734da151c5d7b6e2492">DEBUG_NORMALIZE</a> &lt;&lt;\</div><div class="line">      <span class="stringliteral">&quot; @&quot;</span>&lt;&lt; std::right &lt;&lt; std::setw(5) &lt;&lt; __LINE__ &lt;&lt;<span class="stringliteral">&quot; ~ &quot;</span>&lt;&lt; \</div><div class="line">      DEBUG_FORMAT(<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(__FILE__),<a class="code" href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a>) &lt;&lt; <a class="code" href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a>() &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt;  std::endl; }</div><div class="ttc" id="debug_8hpp_html_a5500e4278fe8143c46f308e07d25a5e2"><div class="ttname"><a href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a></div><div class="ttdeci">std::string _PT()</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00012">debug.hpp:12</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00025">debug.hpp:25</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a3c7cdd2479f13caea4f771fb1c5b2f51"><div class="ttname"><a href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a></div><div class="ttdeci">#define PAT_LEN</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00010">debug.hpp:10</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a1f15293623649a310a7c68ff240f9647"><div class="ttname"><a href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a></div><div class="ttdeci">#define MSG_LEN</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00009">debug.hpp:9</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a8c173f4337670faf2ebf9a91a4b91875"><div class="ttname"><a href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a></div><div class="ttdeci">#define DEBUG_RESET</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00036">debug.hpp:36</a></div></div>
+<div class="ttc" id="debug_8hpp_html_ac8711a553bd7512a6083b35bf4628433"><div class="ttname"><a href="debug_8hpp.html#ac8711a553bd7512a6083b35bf4628433">DEBUG_BOLD</a></div><div class="ttdeci">#define DEBUG_BOLD</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00043">debug.hpp:43</a></div></div>
+<div class="ttc" id="debug_8hpp_html_ac93dabb81c998734da151c5d7b6e2492"><div class="ttname"><a href="debug_8hpp.html#ac93dabb81c998734da151c5d7b6e2492">DEBUG_NORMALIZE</a></div><div class="ttdeci">#define DEBUG_NORMALIZE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00038">debug.hpp:38</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a28430164b5c6b3231ac03bb782cfe5b3"><div class="ttname"><a href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a></div><div class="ttdeci">#define DEBUG_COLOR_BG_RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00033">debug.hpp:33</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00077">77</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00087">87</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a36d0b1b263dfcb2f5ce0e35691e9ec94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36d0b1b263dfcb2f5ce0e35691e9ec94">&#9670;&nbsp;</a></span>DEB_MSG_1</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d0b1b263dfcb2f5ce0e35691e9ec94">&#9670;&nbsp;</a></span>DEB_MSG_1 <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +336,47 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00096">96</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00154">154</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a36d0b1b263dfcb2f5ce0e35691e9ec94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d0b1b263dfcb2f5ce0e35691e9ec94">&#9670;&nbsp;</a></span>DEB_MSG_1 <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00154">154</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a36d0b1b263dfcb2f5ce0e35691e9ec94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d0b1b263dfcb2f5ce0e35691e9ec94">&#9670;&nbsp;</a></span>DEB_MSG_1 <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;DEB_MSG_1S(str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00154">154</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -304,12 +391,32 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a0a423199ef5e4011a3025b4d903a0cc6">DEB_MSG_2S</a>(str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00153">153</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a423199ef5e4011a3025b4d903a0cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a423199ef5e4011a3025b4d903a0cc6">&#9670;&nbsp;</a></span>DEB_MSG_2S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_2S</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
           <td>&#160;&#160;&#160;;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00105">105</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00121">121</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -324,12 +431,100 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a840eb455848ee4990393606c26c5add7">DEB_MSG_3S</a>(str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00152">152</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a840eb455848ee4990393606c26c5add7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840eb455848ee4990393606c26c5add7">&#9670;&nbsp;</a></span>DEB_MSG_3S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_3S</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
           <td>&#160;&#160;&#160;;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00114">114</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00131">131</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1ef7548b09a91629bcd0fcb7f3ef2575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef7548b09a91629bcd0fcb7f3ef2575">&#9670;&nbsp;</a></span>DEB_MSG_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_C</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a12cbef817116dfcf5195433fae3705e2">DEB_MSG_CS</a>(str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00150">150</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a12cbef817116dfcf5195433fae3705e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cbef817116dfcf5195433fae3705e2">&#9670;&nbsp;</a></span>DEB_MSG_CS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_CS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00144">144</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8df3ee1745a5f2f932f5eae08a928035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df3ee1745a5f2f932f5eae08a928035">&#9670;&nbsp;</a></span>DEB_MSG_PS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_MSG_PS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">    std::cout  &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt; <a class="code" href="debug_8hpp.html#ac8711a553bd7512a6083b35bf4628433">DEBUG_BOLD</a> &lt;&lt; <a class="code" href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a>(210,255,210)&lt;&lt; \</div><div class="line">    DEBUG_COLOR_FG_RGB(000,000,000)&lt;&lt; <span class="stringliteral">&quot;[UNT] &quot;</span>&lt;&lt; std::left &lt;&lt; std::setw(10)&lt;&lt;\</div><div class="line">    SCOPE_NAME &lt;&lt; <span class="stringliteral">&quot;: PASSED &quot;</span> &lt;&lt; <a class="code" href="debug_8hpp.html#ac93dabb81c998734da151c5d7b6e2492">DEBUG_NORMALIZE</a> &lt;&lt; std::left &lt;&lt; std::setw(<a class="code" href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a> - 7) &lt;&lt; str &lt;&lt; \</div><div class="line">    <span class="stringliteral">&quot; @&quot;</span>&lt;&lt; std::right &lt;&lt; std::setw(5) &lt;&lt; __LINE__ &lt;&lt;<span class="stringliteral">&quot; ~ &quot;</span>&lt;&lt; \</div><div class="line">    DEBUG_FORMAT(<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(__FILE__),<a class="code" href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a>) &lt;&lt; <a class="code" href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a>() &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt;  std::endl; }</div><div class="ttc" id="debug_8hpp_html_a5500e4278fe8143c46f308e07d25a5e2"><div class="ttname"><a href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a></div><div class="ttdeci">std::string _PT()</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00012">debug.hpp:12</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00025">debug.hpp:25</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a3c7cdd2479f13caea4f771fb1c5b2f51"><div class="ttname"><a href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a></div><div class="ttdeci">#define PAT_LEN</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00010">debug.hpp:10</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a1f15293623649a310a7c68ff240f9647"><div class="ttname"><a href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a></div><div class="ttdeci">#define MSG_LEN</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00009">debug.hpp:9</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a8c173f4337670faf2ebf9a91a4b91875"><div class="ttname"><a href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a></div><div class="ttdeci">#define DEBUG_RESET</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00036">debug.hpp:36</a></div></div>
+<div class="ttc" id="debug_8hpp_html_ac8711a553bd7512a6083b35bf4628433"><div class="ttname"><a href="debug_8hpp.html#ac8711a553bd7512a6083b35bf4628433">DEBUG_BOLD</a></div><div class="ttdeci">#define DEBUG_BOLD</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00043">debug.hpp:43</a></div></div>
+<div class="ttc" id="debug_8hpp_html_ac93dabb81c998734da151c5d7b6e2492"><div class="ttname"><a href="debug_8hpp.html#ac93dabb81c998734da151c5d7b6e2492">DEBUG_NORMALIZE</a></div><div class="ttdeci">#define DEBUG_NORMALIZE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00038">debug.hpp:38</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a28430164b5c6b3231ac03bb782cfe5b3"><div class="ttname"><a href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a></div><div class="ttdeci">#define DEBUG_COLOR_BG_RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00033">debug.hpp:33</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00095">95</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,14 +539,40 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">str</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#aadb00be20be8e93fdf29e8c8119ec35f">DEB_WARS</a>(str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00147">147</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aadb00be20be8e93fdf29e8c8119ec35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadb00be20be8e93fdf29e8c8119ec35f">&#9670;&nbsp;</a></span>DEB_WARS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEB_WARS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{\</div><div class="line">        std::cout &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt; <a class="code" href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a>(255,204,000) &lt;&lt; \</div><div class="line">        DEBUG_COLOR_FG_RGB(000,000,000) &lt;&lt; <span class="stringliteral">&quot;[WAR] &quot;</span> &lt;&lt; str &lt;&lt; <span class="stringliteral">&quot; @&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;~&quot;</span> &lt;&lt; \</div><div class="line">        __FILE__ &lt;&lt; std::endl &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a>;}</div><div class="ttc" id="debug_8hpp_html_a8c173f4337670faf2ebf9a91a4b91875"><div class="ttname"><a href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a></div><div class="ttdeci">#define DEBUG_RESET</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00018">debug.hpp:18</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a28430164b5c6b3231ac03bb782cfe5b3"><div class="ttname"><a href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a></div><div class="ttdeci">#define DEBUG_COLOR_BG_RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00015">debug.hpp:15</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">      std::cout  &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt; <a class="code" href="debug_8hpp.html#ac8711a553bd7512a6083b35bf4628433">DEBUG_BOLD</a> &lt;&lt; <a class="code" href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a>(250,204,000)&lt;&lt; \</div><div class="line">      DEBUG_COLOR_FG_RGB(000,000,000)&lt;&lt; <span class="stringliteral">&quot;[WAR] &quot;</span>&lt;&lt; std::left &lt;&lt; std::setw(10)&lt;&lt;\</div><div class="line">      SCOPE_NAME &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; <a class="code" href="debug_8hpp.html#ac93dabb81c998734da151c5d7b6e2492">DEBUG_NORMALIZE</a> &lt;&lt; std::left &lt;&lt; std::setw(<a class="code" href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a>) &lt;&lt; str &lt;&lt; \</div><div class="line">      <span class="stringliteral">&quot; @&quot;</span>&lt;&lt; std::right &lt;&lt; std::setw(5) &lt;&lt; __LINE__ &lt;&lt;<span class="stringliteral">&quot; ~ &quot;</span>&lt;&lt; \</div><div class="line">      DEBUG_FORMAT(<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(__FILE__),<a class="code" href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a>) &lt;&lt; <a class="code" href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a>() &lt;&lt; <a class="code" href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a> &lt;&lt;  std::endl; }</div><div class="ttc" id="debug_8hpp_html_a5500e4278fe8143c46f308e07d25a5e2"><div class="ttname"><a href="debug_8hpp.html#a5500e4278fe8143c46f308e07d25a5e2">_PT</a></div><div class="ttdeci">std::string _PT()</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00012">debug.hpp:12</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00025">debug.hpp:25</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a3c7cdd2479f13caea4f771fb1c5b2f51"><div class="ttname"><a href="debug_8hpp.html#a3c7cdd2479f13caea4f771fb1c5b2f51">PAT_LEN</a></div><div class="ttdeci">#define PAT_LEN</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00010">debug.hpp:10</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a1f15293623649a310a7c68ff240f9647"><div class="ttname"><a href="debug_8hpp.html#a1f15293623649a310a7c68ff240f9647">MSG_LEN</a></div><div class="ttdeci">#define MSG_LEN</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00009">debug.hpp:9</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a8c173f4337670faf2ebf9a91a4b91875"><div class="ttname"><a href="debug_8hpp.html#a8c173f4337670faf2ebf9a91a4b91875">DEBUG_RESET</a></div><div class="ttdeci">#define DEBUG_RESET</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00036">debug.hpp:36</a></div></div>
+<div class="ttc" id="debug_8hpp_html_ac8711a553bd7512a6083b35bf4628433"><div class="ttname"><a href="debug_8hpp.html#ac8711a553bd7512a6083b35bf4628433">DEBUG_BOLD</a></div><div class="ttdeci">#define DEBUG_BOLD</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00043">debug.hpp:43</a></div></div>
+<div class="ttc" id="debug_8hpp_html_ac93dabb81c998734da151c5d7b6e2492"><div class="ttname"><a href="debug_8hpp.html#ac93dabb81c998734da151c5d7b6e2492">DEBUG_NORMALIZE</a></div><div class="ttdeci">#define DEBUG_NORMALIZE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00038">debug.hpp:38</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a28430164b5c6b3231ac03bb782cfe5b3"><div class="ttname"><a href="debug_8hpp.html#a28430164b5c6b3231ac03bb782cfe5b3">DEBUG_COLOR_BG_RGB</a></div><div class="ttdeci">#define DEBUG_COLOR_BG_RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00033">debug.hpp:33</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00073">73</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00079">79</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +592,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00046">46</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00064">64</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +612,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00034">34</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00052">52</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +628,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00049">49</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00067">67</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -423,7 +644,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00053">53</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00071">71</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +660,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00055">55</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00073">73</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +676,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00051">51</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00069">69</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -471,7 +692,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00054">54</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00072">72</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +708,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00050">50</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00068">68</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +724,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00056">56</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00074">74</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -519,7 +740,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00052">52</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00070">70</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -535,7 +756,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00025">25</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00043">43</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,11 +791,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(<a class="code" href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a>+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;48;2;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(r)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+ \</div><div class="line">                                    _T(g)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(b)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;m&quot;</span>))</div><div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00007">debug.hpp:7</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00008">debug.hpp:8</a></div></div>
-<div class="ttc" id="debug_8hpp_html_af2c3c8bb04b32d83a8c8f7499e57c9c1"><div class="ttname"><a href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a></div><div class="ttdeci">#define DEBUG_ESCAPE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00010">debug.hpp:10</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code" href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a>+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;48;2;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(r)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+ \</div><div class="line">                                    _T(g)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(b)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;m&quot;</span>))</div><div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00025">debug.hpp:25</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00026">debug.hpp:26</a></div></div>
+<div class="ttc" id="debug_8hpp_html_af2c3c8bb04b32d83a8c8f7499e57c9c1"><div class="ttname"><a href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a></div><div class="ttdeci">#define DEBUG_ESCAPE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00028">debug.hpp:28</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00015">15</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00033">33</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,11 +830,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(<a class="code" href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a>+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;38;2;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(r)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+ \</div><div class="line">                                    _T(g)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(b)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;m&quot;</span>))</div><div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00007">debug.hpp:7</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00008">debug.hpp:8</a></div></div>
-<div class="ttc" id="debug_8hpp_html_af2c3c8bb04b32d83a8c8f7499e57c9c1"><div class="ttname"><a href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a></div><div class="ttdeci">#define DEBUG_ESCAPE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00010">debug.hpp:10</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code" href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a>+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;38;2;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(r)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+ \</div><div class="line">                                    _T(g)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;;&quot;</span>)+<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(b)+<a class="code" href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a>(<span class="stringliteral">&quot;m&quot;</span>))</div><div class="ttc" id="debug_8hpp_html_a9f9040d03fff083de22d432a3672bbb8"><div class="ttname"><a href="debug_8hpp.html#a9f9040d03fff083de22d432a3672bbb8">_S</a></div><div class="ttdeci">#define _S(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00025">debug.hpp:25</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00026">debug.hpp:26</a></div></div>
+<div class="ttc" id="debug_8hpp_html_af2c3c8bb04b32d83a8c8f7499e57c9c1"><div class="ttname"><a href="debug_8hpp.html#af2c3c8bb04b32d83a8c8f7499e57c9c1">DEBUG_ESCAPE</a></div><div class="ttdeci">#define DEBUG_ESCAPE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00028">debug.hpp:28</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00013">13</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00031">31</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -629,7 +850,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00047">47</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00065">65</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -645,7 +866,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00035">35</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00053">53</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -661,7 +882,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00010">10</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00028">28</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -677,7 +898,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00026">26</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00044">44</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -693,7 +914,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00037">37</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00055">55</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -709,7 +930,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00041">41</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00059">59</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -725,7 +946,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00043">43</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00061">61</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -741,7 +962,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00039">39</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00057">57</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +978,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00042">42</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00060">60</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -773,7 +994,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00038">38</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00056">56</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -789,7 +1010,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00044">44</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00062">62</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -805,7 +1026,37 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00040">40</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00058">58</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1ff434e1d8bf7ffd8b2ed7c3c7a839f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff434e1d8bf7ffd8b2ed7c3c7a839f1">&#9670;&nbsp;</a></span>DEBUG_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_FORMAT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((str.length()-len)&lt;0)? \</div><div class="line">                               (str) : ( <span class="stringliteral">&quot;...&quot;</span> +  str.substr(str.length() - len) ) )</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00076">76</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -821,7 +1072,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00027">27</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00045">45</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -837,7 +1088,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00023">23</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00041">41</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -853,7 +1104,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00022">22</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00040">40</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -869,7 +1120,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00020">20</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00038">38</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -885,7 +1136,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00021">21</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00039">39</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -901,7 +1152,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00029">29</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00047">47</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -917,7 +1168,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00018">18</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00036">36</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -933,7 +1184,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00031">31</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00049">49</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -953,7 +1204,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00011">11</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00029">29</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -969,7 +1220,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00030">30</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00048">48</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -985,7 +1236,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00032">32</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00050">50</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -1001,166 +1252,76 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00028">28</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00046">46</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aa07938bbd327f8d47de1ca96a674e9a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa07938bbd327f8d47de1ca96a674e9a9">&#9670;&nbsp;</a></span>P_DEB_MSG</h2>
+<a id="a1f15293623649a310a7c68ff240f9647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f15293623649a310a7c68ff240f9647">&#9670;&nbsp;</a></span>MSG_LEN</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define P_DEB_MSG</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">str</td><td>)</td>
-          <td>&#160;&#160;&#160;;</td>
+          <td class="memname">#define MSG_LEN&#160;&#160;&#160;90</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00094">94</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00009">9</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
 
 </div>
 </div>
-<a id="afc3e543143846837851b2d08470605d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc3e543143846837851b2d08470605d6">&#9670;&nbsp;</a></span>P_MAC_MSG</h2>
+<a id="a3c7cdd2479f13caea4f771fb1c5b2f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7cdd2479f13caea4f771fb1c5b2f51">&#9670;&nbsp;</a></span>PAT_LEN</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define P_MAC_MSG</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">mac, </td>
+          <td class="memname">#define PAT_LEN&#160;&#160;&#160;15</td>
         </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00010">10</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa08a6c932380a99ff896d2b346db4369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08a6c932380a99ff896d2b346db4369">&#9670;&nbsp;</a></span>SCOPE_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
+          <td class="memname">#define SCOPE_NAME&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00022">22</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a5500e4278fe8143c46f308e07d25a5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5500e4278fe8143c46f308e07d25a5e2">&#9670;&nbsp;</a></span>_PT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string _PT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">str&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00095">95</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac48ac58ca1f14396e4c4b54e40c2292f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac48ac58ca1f14396e4c4b54e40c2292f">&#9670;&nbsp;</a></span>PERFORMPRAGMA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PERFORMPRAGMA</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">str</td><td>)</td>
-          <td>&#160;&#160;&#160;_Pragma(#str)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00071">71</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ae73053051efbb45c3a39751f5ce9fb36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae73053051efbb45c3a39751f5ce9fb36">&#9670;&nbsp;</a></span>PROJECT_NAME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROJECT_NAME&#160;&#160;&#160;&quot;undefined&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00063">63</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4a776fa6ea8b7bdf8dfa04ad42b46407"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a776fa6ea8b7bdf8dfa04ad42b46407">&#9670;&nbsp;</a></span>PROJECT_VERSION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROJECT_VERSION&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00066">66</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad705dc78222473228fa826e42eca95f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad705dc78222473228fa826e42eca95f1">&#9670;&nbsp;</a></span>VALUE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VALUE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="debug_8hpp.html#a13f12eb2841466cc0327e25123af4af4">VALUETOSTRING</a>(x)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00070">70</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a13f12eb2841466cc0327e25123af4af4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13f12eb2841466cc0327e25123af4af4">&#9670;&nbsp;</a></span>VALUETOSTRING</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VALUETOSTRING</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;#x</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00069">69</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa3df6225c8bcee82b99163807c1b2a13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3df6225c8bcee82b99163807c1b2a13">&#9670;&nbsp;</a></span>YELLOWDEBUG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define YELLOWDEBUG&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00060">60</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="debug_8hpp_source.html#l00012">12</a> of file <a class="el" href="debug_8hpp_source.html">debug.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">struct </span>timespec ts;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    timespec_get(&amp;ts, TIME_UTC);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">char</span> buff[100];</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    strftime(buff, <span class="keyword">sizeof</span> buff, <span class="stringliteral">&quot;%d.%m.%Y  %T&quot;</span>, gmtime(&amp;ts.tv_sec));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; buff &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::to_string(ts.tv_nsec).substr(0,5) &lt;&lt; <span class="stringliteral">&quot; UTC]&quot;</span> ;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -1,33 +1,39 @@
-
-//14.07.18
-  + Documentation
-  + Todo list
-  + Macros for debugging 
-
-
-///15.07.18
-  + karte class
-  + tile class
-  + started to write down the time @12:00
-  + tiles position @12:01
-  ~ draw in title @13:43
-  + draw in karte @13:43
-  + map movable @14:15
-  + map starts in mid of the window @14:45 
-  ~ sucesfully fixed a bug i caused by deleting something necessary by accident @15:32
-  + map file now affects the plotted texture @16:45
-  + added comments @17:49
-  + added a "tool" to create maps @22:50 (yeah that took some time)
-///end of the day. Finished 1.
-
-
-///16.07.18
-  + player class @13:09
-  + player textures @13:47
-  + player movement with animations @15:34
-///Finsihed 2. Exception 2.2 -> Not solvable. Im sure.
-///having problems with colision
-
-///17.07.18
-///I struggle with my internet connection
-  + collision @14:00
+/**
+    @page changelog Changelog
+    @brief Its a Changelog
+    @tableofcontents 
+    @section ver1 Start[14.07.18-17.07.18]
+    @subsection ver1_sub1 Grundstein [14.07.18]
+        Anlegen des Projectes
+        <b>added</b>
+        + Documentation
+        + Todo list
+        + Macros for debugging
+    @subsection ver1_sub2 Karte [15.07.18]
+        Erstellen einer Karte
+        <b>added</b>
+        + karte class
+        + tile class
+        + started to write down the time @12:00
+        + tiles position @12:01
+        + draw in karte @13:43
+        + map movable @14:15
+        + map starts in mid of the window @14:45 
+        + map file now affects the plotted texture @16:45
+        + added comments @17:49
+        + added a "tool" to create maps @22:50 (yeah that took some time)
+        <b>changed</b>
+        - draw in title @13:43
+        + sucesfully fixed a bug i caused by deleting something necessary by accident @15:32
+    @subsection ver1_sub3 Player [16.07.18]
+        Erstellen des Player
+        <b>added</b>
+        + player class @13:09
+        + player textures @13:47
+        + player movement with animations @15:34
+    @subsection ver1_sub4 Collision [17.07.18]
+        Added Collision
+        @todo Water animations 
+        <b>added</b>
+        + collision @14:00
+*/

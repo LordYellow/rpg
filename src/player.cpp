@@ -3,6 +3,8 @@
 
 #include "./../header/player.hpp"
 #include <math.h>
+#define SCOPE_NAME "Player"
+#include "./../header/debug.hpp"
 
 using namespace std;
 
@@ -46,4 +48,5 @@ void player::move(int x, int y){
     }
 }
 
+#undef SCOPE_NAME
 #endif

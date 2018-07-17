@@ -5,6 +5,8 @@
 #include "./../src/karte.cpp"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#define SCOPE_NAME "Player"
+#include "./debug.hpp"
 
 class player{
 public:

@@ -3,6 +3,8 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
 #include <map>
+#define SCOPE_NAME "Texture"
+#include "./debug.hpp"
 
 using namespace std;
 

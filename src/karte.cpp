@@ -7,6 +7,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#define SCOPE_NAME "Karte"
+#include "./../header/debug.hpp"
 
 using namespace std;
 
@@ -64,6 +66,20 @@ karte::karte ( const char* path, SDL_Renderer* renner) {
     }
     
     this->walkable = resized;
+    //now generate obstacles
+    while(getline(readMap, line) && line != "obstacle end"){ 
+        //reads the file until it ends 
+        if(line.size() != 0){ //if the line is empty it will end the current "line"
+         //else it will create a new tile in the current line with the given texture
+            int x = stoi(line);
+            getline(readMap, line);
+            int y = stoi(line);
+            getline(readMap, line);
+            this->obstaclevector.push_back(obstacle(line.c_str(), this->renner, x, y));
+            DEB_MSG_3("Pushed Obstacle in Vector")
+        }
+
+    }
 }
 
 void karte::draw(int cx, int cy){
@@ -75,6 +91,14 @@ void karte::draw(int cx, int cy){
             DEB_MSG_3("drawing at: " + _T((x+cx+this->spx)*PICSIZE) + " " + _T((y+cy+this->spy)*PICSIZE))
         }
     }
+
 }
 
+void karte::drawobstacle(int cx, int cy){
+    for(size_t i = 0; i < this->obstaclevector.size(); i++){
+        this->obstaclevector[i].draw(cx + this->spx, cy + this->spy);
+    }
+}
+
+#undef SCOPE_NAME
 #endif

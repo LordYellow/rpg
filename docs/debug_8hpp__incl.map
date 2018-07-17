@@ -1,5 +1,7 @@
 <map id="rpg/header/debug.hpp" name="rpg/header/debug.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="7,80,62,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="87,80,159,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="91,5,238,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="85,80,157,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,80,239,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="263,80,330,107"/>
 </map>

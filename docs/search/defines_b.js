@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yellowdebug',['YELLOWDEBUG',['../debug_8hpp.html#aa3df6225c8bcee82b99163807c1b2a13',1,'YELLOWDEBUG():&#160;debug.hpp'],['../rpg__definitions_8hpp.html#aa3df6225c8bcee82b99163807c1b2a13',1,'YELLOWDEBUG():&#160;rpg_definitions.hpp']]]
+  ['width',['WIDTH',['../rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d',1,'rpg_definitions.hpp']]]
 ];

@@ -1,8 +1,11 @@
 <map id="player" name="player">
-<area shape="rect" id="node1" title=" " alt="" coords="425,110,483,137"/>
-<area shape="rect" id="node2" href="$classkarte.html" title=" " alt="" coords="283,78,333,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,164,47"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,71,164,112"/>
-<area shape="rect" id="node5" title="STL class." alt="" coords="268,135,348,162"/>
-<area shape="rect" id="node6" title="STL class." alt="" coords="21,136,148,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="723,131,780,157"/>
+<area shape="rect" id="node2" href="$classkarte.html" title=" " alt="" coords="580,99,631,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="270,7,427,33"/>
+<area shape="rect" id="node4" href="$classobstacle.html" title=" " alt="" coords="93,7,164,33"/>
+<area shape="rect" id="node5" href="$classtile.html" title=" " alt="" coords="5,7,44,33"/>
+<area shape="rect" id="node6" title=" " alt="" coords="269,58,428,99"/>
+<area shape="rect" id="node7" title=" " alt="" coords="269,123,428,165"/>
+<area shape="rect" id="node8" title="STL class." alt="" coords="565,156,645,183"/>
+<area shape="rect" id="node9" title="STL class." alt="" coords="285,189,412,230"/>
 </map>

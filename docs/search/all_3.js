@@ -1,10 +1,17 @@
 var searchData=
 [
   ['deb_5ferr',['DEB_ERR',['../debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45',1,'debug.hpp']]],
-  ['deb_5fmsg_5f1',['DEB_MSG_1',['../debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94',1,'debug.hpp']]],
+  ['deb_5ferrs',['DEB_ERRS',['../debug_8hpp.html#a18cd783df08148109fede39c6b505fdc',1,'debug.hpp']]],
+  ['deb_5fmsg_5f1',['DEB_MSG_1',['../debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94',1,'DEB_MSG_1():&#160;debug.hpp'],['../debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94',1,'DEB_MSG_1():&#160;debug.hpp'],['../debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94',1,'DEB_MSG_1():&#160;debug.hpp']]],
   ['deb_5fmsg_5f2',['DEB_MSG_2',['../debug_8hpp.html#a01366b64be389d7cea095ae05272f709',1,'debug.hpp']]],
+  ['deb_5fmsg_5f2s',['DEB_MSG_2S',['../debug_8hpp.html#a0a423199ef5e4011a3025b4d903a0cc6',1,'debug.hpp']]],
   ['deb_5fmsg_5f3',['DEB_MSG_3',['../debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874',1,'debug.hpp']]],
+  ['deb_5fmsg_5f3s',['DEB_MSG_3S',['../debug_8hpp.html#a840eb455848ee4990393606c26c5add7',1,'debug.hpp']]],
+  ['deb_5fmsg_5fc',['DEB_MSG_C',['../debug_8hpp.html#a1ef7548b09a91629bcd0fcb7f3ef2575',1,'debug.hpp']]],
+  ['deb_5fmsg_5fcs',['DEB_MSG_CS',['../debug_8hpp.html#a12cbef817116dfcf5195433fae3705e2',1,'debug.hpp']]],
+  ['deb_5fmsg_5fps',['DEB_MSG_PS',['../debug_8hpp.html#a8df3ee1745a5f2f932f5eae08a928035',1,'debug.hpp']]],
   ['deb_5fwar',['DEB_WAR',['../debug_8hpp.html#af438d8105a4d88218d428090f70d1571',1,'debug.hpp']]],
+  ['deb_5fwars',['DEB_WARS',['../debug_8hpp.html#aadb00be20be8e93fdf29e8c8119ec35f',1,'debug.hpp']]],
   ['debug_2ehpp',['debug.hpp',['../debug_8hpp.html',1,'']]],
   ['debug_5f8bit_5fbackground',['DEBUG_8BIT_BACKGROUND',['../debug_8hpp.html#afe845c2207717e6dc2407d5c8d368412',1,'debug.hpp']]],
   ['debug_5f8bit_5fforeground',['DEBUG_8BIT_FOREGROUND',['../debug_8hpp.html#a21bdb7915c4d0a45152ea296d1f31193',1,'debug.hpp']]],
@@ -31,6 +38,7 @@ var searchData=
   ['debug_5ffg_5fred',['DEBUG_FG_RED',['../debug_8hpp.html#a4c94ff3f75541910f2ff82fa30f2fcb1',1,'debug.hpp']]],
   ['debug_5ffg_5fwhite',['DEBUG_FG_WHITE',['../debug_8hpp.html#afd2b056f82dddf9d38c248c83bd85da7',1,'debug.hpp']]],
   ['debug_5ffg_5fyellow',['DEBUG_FG_YELLOW',['../debug_8hpp.html#aa96eac3584753fe6c60f59c7fd0661a7',1,'debug.hpp']]],
+  ['debug_5fformat',['DEBUG_FORMAT',['../debug_8hpp.html#a1ff434e1d8bf7ffd8b2ed7c3c7a839f1',1,'debug.hpp']]],
   ['debug_5fitalic',['DEBUG_ITALIC',['../debug_8hpp.html#a9cf2f0f3bacdf9656b035af5e59f8a73',1,'debug.hpp']]],
   ['debug_5fno_5foverlined',['DEBUG_NO_OVERLINED',['../debug_8hpp.html#af25454569d8069dee9b203978842bc56',1,'debug.hpp']]],
   ['debug_5fno_5funderline',['DEBUG_NO_UNDERLINE',['../debug_8hpp.html#a422ae1f3dbc581dc2b331c15c90197d5',1,'debug.hpp']]],
@@ -44,6 +52,7 @@ var searchData=
   ['debug_5fstrike',['DEBUG_STRIKE',['../debug_8hpp.html#acdf3bb3ad7c7df8676a78d81c99dc349',1,'debug.hpp']]],
   ['debug_5funderline',['DEBUG_UNDERLINE',['../debug_8hpp.html#ab4f2c6aa5f29c4d6c0dfe934a0b827d1',1,'debug.hpp']]],
   ['dec',['DEC',['../CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
-  ['draw',['draw',['../classkarte.html#a4c55a7b9f8c7a6e2e04bc0e15ef103ec',1,'karte::draw()'],['../classplayer.html#a67423ce10d4abb42775868f978d04247',1,'player::draw()'],['../classtile.html#a263e71f8dd39ac9f93a54d75b5dc3a9f',1,'tile::draw()']]],
+  ['draw',['draw',['../classkarte.html#a4c55a7b9f8c7a6e2e04bc0e15ef103ec',1,'karte::draw()'],['../classobstacle.html#a93c362bdadcb56aaed271adeb9a43d8d',1,'obstacle::draw()'],['../classplayer.html#a67423ce10d4abb42775868f978d04247',1,'player::draw()'],['../classtile.html#a263e71f8dd39ac9f93a54d75b5dc3a9f',1,'tile::draw()']]],
+  ['drawobstacle',['drawobstacle',['../classkarte.html#a5134d0fc3ef467c07c79e8e4440bd2ee',1,'karte']]],
   ['dst',['dst',['../classplayer.html#a51ac4a57a2e2ea2ffd1ac82386ce617b',1,'player::dst()'],['../classtile.html#ad3b4ae05da2216dfb16e01a4fedbc384',1,'tile::dst()']]]
 ];

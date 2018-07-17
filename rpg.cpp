@@ -30,6 +30,8 @@ int main(){
                 
                 you.draw();
                 
+                k.drawobstacle(cx, cy);
+                
                 SDL_RenderPresent(renner);
         }
 

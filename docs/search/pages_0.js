@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rpg',['rpg',['../md_rpg_README.html',1,'']]]
+  ['changelog',['Changelog',['../changelog.html',1,'']]]
 ];
