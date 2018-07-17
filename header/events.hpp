@@ -3,6 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <map>
+#include "./../src/player.cpp"
 
 using namespace std;
 
@@ -44,7 +45,7 @@ void onKeyUp(SDL_Event* event){
 /**
  * @brief handels the event stuff for sdl
  */
-void events(SDL_Event* event, int* cx, int* cy){
+void events(SDL_Event* event, int* cx, int* cy, player *you){
         if(SDL_PollEvent(event)){
                 switch ((*event).type) {
                         case SDL_QUIT: onQuit(); break;
@@ -56,10 +57,12 @@ void events(SDL_Event* event, int* cx, int* cy){
                 }
         }
         
-        if(keys[SDLK_w]){(*cy)++;}
-        if(keys[SDLK_s]){(*cy)--;}
-        if(keys[SDLK_a]){(*cx)++;}
-        if(keys[SDLK_d]){(*cx)--;}
+        if(keys[SDLK_w]){(*you).move(0,-1);}
+        if(keys[SDLK_s]){(*you).move(0,1);}
+        if(keys[SDLK_a]){(*you).move(-1,0);}
+        if(keys[SDLK_d]){(*you).move(1,0);}
+        
+        //SDL_FlushEvent(SDL_KEYDOWN);
 }
 
 #endif

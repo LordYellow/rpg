@@ -6,7 +6,7 @@ textdatei -> karte
 
 2.
 Spieler 1 tile grosss
-ab now -> tilegroesse variabel
+ab now -> tilegroesse variabel   //?
 Spieler kann sich bewegen. Flussig.
 2 bilder animation
 no collision

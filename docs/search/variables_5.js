@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['renner',['renner',['../classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63',1,'karte::renner()'],['../classtile.html#a2c3fe3981fd1af7b4f6cf0b62928ec8b',1,'tile::renner()']]],
-  ['running',['running',['../events_8hpp.html#af77f8244799e85284b8b438289f5f689',1,'events.hpp']]]
+  ['path',['path',['../classplayer.html#a014e3fe5acf94782defd22d927423d88',1,'player::path()'],['../classtile.html#a02e0482e2a7c569023f1311c44b35df4',1,'tile::path()']]],
+  ['pos',['pos',['../classplayer.html#a9eb743b6d873a4f3076415d4c051a27d',1,'player']]]
 ];

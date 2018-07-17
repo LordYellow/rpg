@@ -13,6 +13,7 @@ public:
         
         //in this "map" every tile is stored. only the neede tiles will be drawn
         std::vector<std::vector<tile>> field;
+        std::vector<std::vector<bool>> walkable;
         
         /**
          * @brief draws the needed tiles

@@ -1,6 +1,7 @@
 #include "./header/rpg_definitions.hpp"
 #include "./src/karte.cpp"
 #include "./header/events.hpp"
+#include "./src/player.cpp"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
@@ -13,6 +14,7 @@ int main(){
         if(renner == nullptr){SDL_DestroyWindow(win); std::cout << "renderererror: " << SDL_GetError() << std::endl; SDL_Quit(); return 1;}
         SDL_Event event;
         karte k("maps/map", renner);
+        player you("./images/player/", 44*16, 25*16, renner, &k);
         
         SDL_SetEventFilter(filter, NULL);
         
@@ -22,11 +24,11 @@ int main(){
                 SDL_SetRenderDrawColor(renner, 255, 255, 255, SDL_ALPHA_OPAQUE);
                 SDL_RenderClear(renner);
                 
-                events(&event, &cx, &cy);
+                events(&event, &cx, &cy, &you);
                 
                 k.draw(cx, cy);
-                DEB_MSG_3("cx: " + _T(cx))
-                DEB_MSG_3("cy: " + _T(cy))
+                
+                you.draw();
                 
                 SDL_RenderPresent(renner);
         }
