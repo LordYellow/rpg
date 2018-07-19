@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['karte',['karte',['../classkarte.html#ab1f04695e5bb1146d74f725ab4fbc05b',1,'karte']]]
+  ['handleevents',['handleEvents',['../classgame.html#a8fedf23a5fe4329f1f05758e26d58319',1,'game']]]
 ];

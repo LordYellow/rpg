@@ -5,8 +5,12 @@
 #define PROJECT_NAME RPG
 #define PROJECT_VERSION 0
 
-#define PICSIZE 16
-#define HIGHT 60*PICSIZE
-#define WIDTH 80*PICSIZE
+#define PICSIZE 32
+#define HIGHT 20
+#define WIDTH 35
+#define SCREENHIGHT HIGHT*PICSIZE
+#define SCREENWIDTH WIDTH*PICSIZE
+
+
 
 #endif

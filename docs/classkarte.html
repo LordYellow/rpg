@@ -63,7 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classkarte-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">karte Class Reference</div>  </div>
@@ -71,55 +70,24 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="karte_8hpp_source.html">karte.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for karte:</div>
-<div class="dyncontent">
-<div class="center"><img src="classkarte__coll__graph.png" border="0" usemap="#karte_coll__map" alt="Collaboration graph"/></div>
-<map name="karte_coll__map" id="karte_coll__map">
-<area shape="rect" id="node1" title=" " alt="" coords="565,65,616,92"/>
-<area shape="rect" id="node2" title=" " alt="" coords="270,7,427,33"/>
-<area shape="rect" id="node3" href="classobstacle.html" title=" " alt="" coords="93,7,164,33"/>
-<area shape="rect" id="node4" href="classtile.html" title=" " alt="" coords="5,7,44,33"/>
-<area shape="rect" id="node5" title=" " alt="" coords="269,58,428,99"/>
-<area shape="rect" id="node6" title=" " alt="" coords="269,123,428,165"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab1f04695e5bb1146d74f725ab4fbc05b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#ab1f04695e5bb1146d74f725ab4fbc05b">karte</a> (const char *path, SDL_Renderer *<a class="el" href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">renner</a>)</td></tr>
-<tr class="separator:ab1f04695e5bb1146d74f725ab4fbc05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c55a7b9f8c7a6e2e04bc0e15ef103ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a4c55a7b9f8c7a6e2e04bc0e15ef103ec">draw</a> (int cx, int cy)</td></tr>
-<tr class="memdesc:a4c55a7b9f8c7a6e2e04bc0e15ef103ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">draws the needed tiles  <a href="#a4c55a7b9f8c7a6e2e04bc0e15ef103ec">More...</a><br /></td></tr>
-<tr class="separator:a4c55a7b9f8c7a6e2e04bc0e15ef103ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5134d0fc3ef467c07c79e8e4440bd2ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a5134d0fc3ef467c07c79e8e4440bd2ee">drawobstacle</a> (int cx, int cy)</td></tr>
-<tr class="separator:a5134d0fc3ef467c07c79e8e4440bd2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ac4991b5dd1de78a4566de20b3e9fcf63"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">renner</a></td></tr>
-<tr class="separator:ac4991b5dd1de78a4566de20b3e9fcf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93df6d93a42bd03e570049f5468fdae5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classtile.html">tile</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">field</a></td></tr>
-<tr class="separator:a93df6d93a42bd03e570049f5468fdae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19c39e9cb2c3b57b5cba73f35b5c4bd1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a19c39e9cb2c3b57b5cba73f35b5c4bd1">walkable</a></td></tr>
-<tr class="separator:a19c39e9cb2c3b57b5cba73f35b5c4bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb3b2cbffd850258d04909aa3bf4ddb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">mapWidth</a></td></tr>
-<tr class="separator:abeb3b2cbffd850258d04909aa3bf4ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab21851aeb457bb889e9a26321e5c36b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">mapHight</a></td></tr>
-<tr class="separator:ab21851aeb457bb889e9a26321e5c36b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0088845e4b1ae492b21c162c7a235f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a></td></tr>
-<tr class="separator:ad0088845e4b1ae492b21c162c7a235f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e61fb31e1cedd603eae27809604a9fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a></td></tr>
-<tr class="separator:a5e61fb31e1cedd603eae27809604a9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba482744ca2921b1c07a8763a96fb0c3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classobstacle.html">obstacle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#aba482744ca2921b1c07a8763a96fb0c3">obstaclevector</a></td></tr>
-<tr class="separator:aba482744ca2921b1c07a8763a96fb0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d210e639f0587e750f98929fb3f485d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a7d210e639f0587e750f98929fb3f485d">karte</a> (const char *path, <a class="el" href="classtexture.html">texture</a> *txp)</td></tr>
+<tr class="separator:a7d210e639f0587e750f98929fb3f485d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e0e55c71f66f9480d4eca09bf8371c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a43e0e55c71f66f9480d4eca09bf8371c">karte</a> ()</td></tr>
+<tr class="separator:a43e0e55c71f66f9480d4eca09bf8371c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafe498843151be72982a4a143a8f863"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#adafe498843151be72982a4a143a8f863">draw</a> ()</td></tr>
+<tr class="separator:adafe498843151be72982a4a143a8f863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165c9afc09e4aa66908e012e547bb99e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkarte.html#a165c9afc09e4aa66908e012e547bb99e">changecxcy</a> (double x, double y)</td></tr>
+<tr class="separator:a165c9afc09e4aa66908e012e547bb99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00012">12</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00009">9</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab1f04695e5bb1146d74f725ab4fbc05b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1f04695e5bb1146d74f725ab4fbc05b">&#9670;&nbsp;</a></span>karte()</h2>
+<a id="a7d210e639f0587e750f98929fb3f485d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d210e639f0587e750f98929fb3f485d">&#9670;&nbsp;</a></span>karte() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,8 +101,8 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SDL_Renderer *&#160;</td>
-          <td class="paramname"><em>renner</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtexture.html">texture</a> *&#160;</td>
+          <td class="paramname"><em>txp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -144,31 +112,76 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00015">15</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                                     {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    this-&gt;<a class="code" href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">renner</a> = <a class="code" href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">renner</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ifstream readMap(path);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(!readMap.is_open()){<a class="code" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(<span class="stringliteral">&quot;Could not open file&quot;</span>)}</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">string</span> line;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    vector&lt;tile&gt; tv;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    vector&lt;bool&gt; wk;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">while</span>(getline(readMap, line) &amp;&amp; line != <span class="stringliteral">&quot;end&quot;</span>){ </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//reads the file until it ends </span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>(line.size() == 0){ <span class="comment">//if the line is empty it will end the current &quot;line&quot;</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="debug_8hpp.html#a01366b64be389d7cea095ae05272f709">DEB_MSG_2</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(tv.size()) + <span class="stringliteral">&quot; elements pushed in field&quot;</span>)</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            this-&gt;<a class="code" href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">field</a>.push_back(tv);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="debug_8hpp.html#a01366b64be389d7cea095ae05272f709">DEB_MSG_2</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(<a class="code" href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">field</a>.size()))</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            tv.clear();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            this-&gt;<a class="code" href="classkarte.html#a19c39e9cb2c3b57b5cba73f35b5c4bd1">walkable</a>.push_back(wk);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            wk.clear();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }else{ <span class="comment">//else it will create a new tile in the current line with the given texture</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordtype">string</span> s = <span class="stringliteral">&quot;./images/mapimages/&quot;</span> + line;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            tv.push_back(<a class="code" href="classtile.html">tile</a>(s.c_str(), this-&gt;<a class="code" href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">renner</a>));</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;Pushed Tile in Vector&quot;</span>)</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            wk.push_back(tv[tv.size()-1].<a class="code" href="classkarte.html#a19c39e9cb2c3b57b5cba73f35b5c4bd1">walkable</a>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//the following is to center the map when drawn </span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    this-&gt;<a class="code" href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">mapWidth</a> = this-&gt;<a class="code" href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">field</a>.size();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    this-&gt;<a class="code" href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">mapHight</a> = this-&gt;<a class="code" href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">field</a>[0].size();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">mapWidth</a>) + &quot; = <a class="code" href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">mapWidth</a>&quot;)</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">mapHight</a>) + &quot; = <a class="code" href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">mapHight</a>&quot;)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//dont question it</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a> = <a class="code" href="rpg__definitions_8hpp.html#a3cdca3262c81fd4c287fa6f4807167c4">HIGHT</a>/<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>/2-this-&gt;<a class="code" href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">mapWidth</a>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a> = <a class="code" href="rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>/2-this-&gt;<a class="code" href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">mapHight</a>/2;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>) + &quot; = <a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>&quot;)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>) + &quot; = <a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>&quot;)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    vector&lt;vector&lt;<span class="keywordtype">bool</span>&gt;&gt; resized;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    vector&lt;<span class="keywordtype">bool</span>&gt; setin;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    for(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>; i++){setin.push_back(<span class="keyword">false</span>);}</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="rpg__definitions_8hpp.html#a3cdca3262c81fd4c287fa6f4807167c4">HIGHT</a>; i++){resized.push_back(setin);}</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; this-&gt;walkable.size(); y++){</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; this-&gt;walkable[0].size(); x++){</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span>(this-&gt;walkable[y][x]){</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;filling square at y: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>((y+this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>)*16) + <span class="stringliteral">&quot; x: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>((x+this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>)*16))</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = (y+this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>)*16; i &lt; (y+this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>)*16+16; i++){</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> a = (x+this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>)*16; a &lt; (x+this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>)*16+16; a++){</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        resized[i][a] = <span class="keyword">true</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                }</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    this-&gt;walkable = resized;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//now generate obstacles</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">while</span>(getline(readMap, line) &amp;&amp; line != <span class="stringliteral">&quot;obstacle end&quot;</span>){ </div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//reads the file until it ends </span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span>(line.size() != 0){ <span class="comment">//if the line is empty it will end the current &quot;line&quot;</span></div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;         <span class="comment">//else it will create a new tile in the current line with the given texture</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordtype">int</span> x = stoi(line);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            getline(readMap, line);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">int</span> y = stoi(line);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            getline(readMap, line);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            this-&gt;<a class="code" href="classkarte.html#aba482744ca2921b1c07a8763a96fb0c3">obstaclevector</a>.push_back(<a class="code" href="classobstacle.html">obstacle</a>(line.c_str(), this-&gt;<a class="code" href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">renner</a>, x, y));</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;Pushed Obstacle in Vector&quot;</span>)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div><div class="ttc" id="classkarte_html_ab21851aeb457bb889e9a26321e5c36b0"><div class="ttname"><a href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">karte::mapHight</a></div><div class="ttdeci">int mapHight</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-<div class="ttc" id="classobstacle_html"><div class="ttname"><a href="classobstacle.html">obstacle</a></div><div class="ttdef"><b>Definition:</b> <a href="obstacle_8hpp_source.html#l00008">obstacle.hpp:8</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a01366b64be389d7cea095ae05272f709"><div class="ttname"><a href="debug_8hpp.html#a01366b64be389d7cea095ae05272f709">DEB_MSG_2</a></div><div class="ttdeci">#define DEB_MSG_2(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00153">debug.hpp:153</a></div></div>
+<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00008">8</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                           {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;textures = txp;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::ifstream readmap(path);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span>(!readmap.is_open()){<a class="code" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(<span class="stringliteral">&quot;Could not Open mapfile&quot;</span>)}</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">char</span> c;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::string cs;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::vector&lt;std::string&gt; headline;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    readmap.get(c);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(c == <span class="charliteral">&#39;[&#39;</span>){</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">for</span>(;;){</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            readmap.get(c);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">if</span>(c == <span class="charliteral">&#39;\n&#39;</span>){<span class="keywordflow">continue</span>;}</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span>(c == <span class="charliteral">&#39; &#39;</span>) <span class="keywordflow">continue</span>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span>(c == <span class="charliteral">&#39;]&#39;</span>){headline.push_back(cs); cs = <span class="stringliteral">&quot;&quot;</span>; <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;i wanna break;&quot;</span>) break;}</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            if(c == &#39;,&#39;){headline.push_back(cs);  cs = <span class="stringliteral">&quot;&quot;</span>; <span class="keywordflow">continue</span>;}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        cs+=c;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }<span class="keywordflow">else</span>{<a class="code" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(<span class="stringliteral">&quot;mapfile not valid&quot;</span>)}</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span>(headline.size() != 9){<a class="code" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(<span class="stringliteral">&quot;mapfile not valid&quot;</span>)}</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Autor: &quot;</span> + headline[0])</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Datum: &quot;</span> + headline[1])</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Uhrzeit: &quot;</span> + headline[2])</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Width &quot;</span> + headline[3])</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Hight &quot;</span> + headline[4])</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Number of Numbers:  &quot;</span> + headline[5])</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Kartenname: &quot;</span> + headline[6])</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Kartentyp: &quot;</span> + headline[7])</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a>(<span class="stringliteral">&quot;Colison Definition at: &quot;</span> + headline[8])</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> mapwidth = stoi(headline[3]), maphight = stoi(headline[4]), numberOfNumbers = stoi(headline[5]);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    txp-&gt;<a class="code" href="classtexture.html#aff3c0a060981e8606ac39b761de56478">changeFilePath</a>(0,headline[7]);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::vector&lt;int&gt; mapLine;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">try</span>{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span>(;;){readmap.get(c); <span class="keywordflow">if</span>(c == <span class="charliteral">&#39;#&#39;</span>){readmap.get(c); <span class="keywordflow">break</span>;}}</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        cs = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; maphight; y++){</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; mapwidth; x++){</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> posx = x; posx &lt; x+numberOfNumbers; posx++){</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    readmap.get(c);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    cs+=c;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                mapLine.push_back(stoi(cs));</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                cs = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            readmap.get(c);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            this-&gt;tiles.push_back(mapLine);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            mapLine.clear();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }<span class="keywordflow">catch</span>(...){<a class="code" href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a>(<span class="stringliteral">&quot;mapfile not valid&quot;</span>)}</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    this-&gt;width = mapwidth;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    this-&gt;hight = maphight;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span>(this-&gt;width &gt; <a class="code" href="rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>){</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        this-&gt;cx = -(this-&gt;width-<a class="code" href="rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>)/2*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }<span class="keywordflow">else</span>{</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        this-&gt;cx = (<a class="code" href="rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>-this-&gt;width)/2*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span>(this-&gt;hight &gt; <a class="code" href="rpg__definitions_8hpp.html#a3cdca3262c81fd4c287fa6f4807167c4">HIGHT</a>){</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        this-&gt;cy = -(this-&gt;hight-<a class="code" href="rpg__definitions_8hpp.html#a3cdca3262c81fd4c287fa6f4807167c4">HIGHT</a>)/2*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }<span class="keywordflow">else</span>{</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        this-&gt;cy = (<a class="code" href="rpg__definitions_8hpp.html#a3cdca3262c81fd4c287fa6f4807167c4">HIGHT</a>-this-&gt;hight)/2*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    readmap.close();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="classtexture_html_aff3c0a060981e8606ac39b761de56478"><div class="ttname"><a href="classtexture.html#aff3c0a060981e8606ac39b761de56478">texture::changeFilePath</a></div><div class="ttdeci">void changeFilePath(uint8_t kindOfTexture, std::string newPath)</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00029">texture.cpp:29</a></div></div>
 <div class="ttc" id="rpg__definitions_8hpp_html_a3cdca3262c81fd4c287fa6f4807167c4"><div class="ttname"><a href="rpg__definitions_8hpp.html#a3cdca3262c81fd4c287fa6f4807167c4">HIGHT</a></div><div class="ttdeci">#define HIGHT</div><div class="ttdef"><b>Definition:</b> <a href="rpg__definitions_8hpp_source.html#l00009">rpg_definitions.hpp:9</a></div></div>
-<div class="ttc" id="classkarte_html_a5e61fb31e1cedd603eae27809604a9fa"><div class="ttname"><a href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">karte::spy</a></div><div class="ttdeci">int spy</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00026">debug.hpp:26</a></div></div>
-<div class="ttc" id="classkarte_html_a19c39e9cb2c3b57b5cba73f35b5c4bd1"><div class="ttname"><a href="classkarte.html#a19c39e9cb2c3b57b5cba73f35b5c4bd1">karte::walkable</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; bool &gt; &gt; walkable</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00019">karte.hpp:19</a></div></div>
-<div class="ttc" id="classkarte_html_ac4991b5dd1de78a4566de20b3e9fcf63"><div class="ttname"><a href="classkarte.html#ac4991b5dd1de78a4566de20b3e9fcf63">karte::renner</a></div><div class="ttdeci">SDL_Renderer * renner</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00015">karte.hpp:15</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a36d0b1b263dfcb2f5ce0e35691e9ec94"><div class="ttname"><a href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a></div><div class="ttdeci">#define DEB_MSG_1(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00154">debug.hpp:154</a></div></div>
-<div class="ttc" id="classkarte_html_a93df6d93a42bd03e570049f5468fdae5"><div class="ttname"><a href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">karte::field</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; tile &gt; &gt; field</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00018">karte.hpp:18</a></div></div>
-<div class="ttc" id="classkarte_html_aba482744ca2921b1c07a8763a96fb0c3"><div class="ttname"><a href="classkarte.html#aba482744ca2921b1c07a8763a96fb0c3">karte::obstaclevector</a></div><div class="ttdeci">std::vector&lt; obstacle &gt; obstaclevector</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00032">karte.hpp:32</a></div></div>
-<div class="ttc" id="classkarte_html_abeb3b2cbffd850258d04909aa3bf4ddb"><div class="ttname"><a href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">karte::mapWidth</a></div><div class="ttdeci">int mapWidth</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a36d0b1b263dfcb2f5ce0e35691e9ec94"><div class="ttname"><a href="debug_8hpp.html#a36d0b1b263dfcb2f5ce0e35691e9ec94">DEB_MSG_1</a></div><div class="ttdeci">#define DEB_MSG_1(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00262">debug.hpp:262</a></div></div>
 <div class="ttc" id="rpg__definitions_8hpp_html_a241aeeb764887ae5e3de58b98f04b16d"><div class="ttname"><a href="rpg__definitions_8hpp.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a></div><div class="ttdeci">#define WIDTH</div><div class="ttdef"><b>Definition:</b> <a href="rpg__definitions_8hpp_source.html#l00010">rpg_definitions.hpp:10</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a5852b5e64b4795d4994b9c2c8bb68874"><div class="ttname"><a href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a></div><div class="ttdeci">#define DEB_MSG_3(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00152">debug.hpp:152</a></div></div>
 <div class="ttc" id="rpg__definitions_8hpp_html_a3603b9392f4d2ef6b4b59af2f61bdeb9"><div class="ttname"><a href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a></div><div class="ttdeci">#define PICSIZE</div><div class="ttdef"><b>Definition:</b> <a href="rpg__definitions_8hpp_source.html#l00008">rpg_definitions.hpp:8</a></div></div>
-<div class="ttc" id="classtile_html"><div class="ttname"><a href="classtile.html">tile</a></div><div class="ttdef"><b>Definition:</b> <a href="tiles_8hpp_source.html#l00007">tiles.hpp:7</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a2f39a533495a081ee6aff43c70873b45"><div class="ttname"><a href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a></div><div class="ttdeci">#define DEB_ERR(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00148">debug.hpp:148</a></div></div>
-<div class="ttc" id="classkarte_html_ad0088845e4b1ae492b21c162c7a235f3"><div class="ttname"><a href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">karte::spx</a></div><div class="ttdeci">int spx</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
+<div class="ttc" id="debug_8hpp_html_a2f39a533495a081ee6aff43c70873b45"><div class="ttname"><a href="debug_8hpp.html#a2f39a533495a081ee6aff43c70873b45">DEB_ERR</a></div><div class="ttdeci">#define DEB_ERR(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00243">debug.hpp:243</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a43e0e55c71f66f9480d4eca09bf8371c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e0e55c71f66f9480d4eca09bf8371c">&#9670;&nbsp;</a></span>karte() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">karte::karte </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00012">12</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{}</div></div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4c55a7b9f8c7a6e2e04bc0e15ef103ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c55a7b9f8c7a6e2e04bc0e15ef103ec">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="a165c9afc09e4aa66908e012e547bb99e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165c9afc09e4aa66908e012e547bb99e">&#9670;&nbsp;</a></span>changecxcy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void karte::changecxcy </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00087">87</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                        {</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    this-&gt;cx-=x;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    this-&gt;cy-=y;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="adafe498843151be72982a4a143a8f863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafe498843151be72982a4a143a8f863">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,209 +189,21 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void karte::draw </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>draws the needed tiles </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cx</td><td>is used to change the part you see (x direction) </td></tr>
-    <tr><td class="paramname">cy</td><td>is used to change the part you see (y direction) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00085">85</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                              {</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;cx: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(cx))</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;cy: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(cy))</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; this-&gt;<a class="code" href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">mapWidth</a>; y++){</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; this-&gt;<a class="code" href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">mapHight</a>; x++){</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            this-&gt;<a class="code" href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">field</a>[y][x].draw((x+cx+this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>)*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>, (y+cy+this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>)*PICSIZE);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;drawing at: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>((x+cx+this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>)*PICSIZE) + <span class="stringliteral">&quot; &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>((y+cy+this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>)*PICSIZE))</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div><div class="ttc" id="classkarte_html_ab21851aeb457bb889e9a26321e5c36b0"><div class="ttname"><a href="classkarte.html#ab21851aeb457bb889e9a26321e5c36b0">karte::mapHight</a></div><div class="ttdeci">int mapHight</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-<div class="ttc" id="classkarte_html_a5e61fb31e1cedd603eae27809604a9fa"><div class="ttname"><a href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">karte::spy</a></div><div class="ttdeci">int spy</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00026">debug.hpp:26</a></div></div>
-<div class="ttc" id="classkarte_html_a93df6d93a42bd03e570049f5468fdae5"><div class="ttname"><a href="classkarte.html#a93df6d93a42bd03e570049f5468fdae5">karte::field</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; tile &gt; &gt; field</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00018">karte.hpp:18</a></div></div>
-<div class="ttc" id="classkarte_html_abeb3b2cbffd850258d04909aa3bf4ddb"><div class="ttname"><a href="classkarte.html#abeb3b2cbffd850258d04909aa3bf4ddb">karte::mapWidth</a></div><div class="ttdeci">int mapWidth</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a5852b5e64b4795d4994b9c2c8bb68874"><div class="ttname"><a href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a></div><div class="ttdeci">#define DEB_MSG_3(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00152">debug.hpp:152</a></div></div>
-<div class="ttc" id="rpg__definitions_8hpp_html_a3603b9392f4d2ef6b4b59af2f61bdeb9"><div class="ttname"><a href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a></div><div class="ttdeci">#define PICSIZE</div><div class="ttdef"><b>Definition:</b> <a href="rpg__definitions_8hpp_source.html#l00008">rpg_definitions.hpp:8</a></div></div>
-<div class="ttc" id="classkarte_html_ad0088845e4b1ae492b21c162c7a235f3"><div class="ttname"><a href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">karte::spx</a></div><div class="ttdeci">int spx</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
+<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00077">77</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; this-&gt;hight; y++){</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        this-&gt;rect.y = (y)*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>+this-&gt;cy;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; this-&gt;width; x++){</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            this-&gt;rect.x = (x)*<a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>+this-&gt;cx;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            this-&gt;textures-&gt;<a class="code" href="classtexture.html#ad5a0bbb1b219b176d7f7ba0cc4889479">renderTexture</a>(this-&gt;tiles[y][x] , 0, this-&gt;rect, <a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>, <a class="code" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div><div class="ttc" id="rpg__definitions_8hpp_html_a3603b9392f4d2ef6b4b59af2f61bdeb9"><div class="ttname"><a href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a></div><div class="ttdeci">#define PICSIZE</div><div class="ttdef"><b>Definition:</b> <a href="rpg__definitions_8hpp_source.html#l00008">rpg_definitions.hpp:8</a></div></div>
+<div class="ttc" id="classtexture_html_ad5a0bbb1b219b176d7f7ba0cc4889479"><div class="ttname"><a href="classtexture.html#ad5a0bbb1b219b176d7f7ba0cc4889479">texture::renderTexture</a></div><div class="ttdeci">void renderTexture(int textureID, uint8_t kindOfTexture, SDL_Rect dst, int hight, int width)</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00013">texture.cpp:13</a></div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a5134d0fc3ef467c07c79e8e4440bd2ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5134d0fc3ef467c07c79e8e4440bd2ee">&#9670;&nbsp;</a></span>drawobstacle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void karte::drawobstacle </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00097">97</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                      {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code" href="classkarte.html#aba482744ca2921b1c07a8763a96fb0c3">obstaclevector</a>.size(); i++){</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        this-&gt;<a class="code" href="classkarte.html#aba482744ca2921b1c07a8763a96fb0c3">obstaclevector</a>[i].draw(cx + this-&gt;<a class="code" href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">spx</a>, cy + this-&gt;<a class="code" href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">spy</a>);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div><div class="ttc" id="classkarte_html_a5e61fb31e1cedd603eae27809604a9fa"><div class="ttname"><a href="classkarte.html#a5e61fb31e1cedd603eae27809604a9fa">karte::spy</a></div><div class="ttdeci">int spy</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-<div class="ttc" id="classkarte_html_aba482744ca2921b1c07a8763a96fb0c3"><div class="ttname"><a href="classkarte.html#aba482744ca2921b1c07a8763a96fb0c3">karte::obstaclevector</a></div><div class="ttdeci">std::vector&lt; obstacle &gt; obstaclevector</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00032">karte.hpp:32</a></div></div>
-<div class="ttc" id="classkarte_html_ad0088845e4b1ae492b21c162c7a235f3"><div class="ttname"><a href="classkarte.html#ad0088845e4b1ae492b21c162c7a235f3">karte::spx</a></div><div class="ttdeci">int spx</div><div class="ttdef"><b>Definition:</b> <a href="karte_8hpp_source.html#l00031">karte.hpp:31</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a93df6d93a42bd03e570049f5468fdae5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93df6d93a42bd03e570049f5468fdae5">&#9670;&nbsp;</a></span>field</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="classtile.html">tile</a>&gt; &gt; karte::field</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00018">18</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab21851aeb457bb889e9a26321e5c36b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab21851aeb457bb889e9a26321e5c36b0">&#9670;&nbsp;</a></span>mapHight</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int karte::mapHight</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00031">31</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abeb3b2cbffd850258d04909aa3bf4ddb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeb3b2cbffd850258d04909aa3bf4ddb">&#9670;&nbsp;</a></span>mapWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int karte::mapWidth</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00031">31</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aba482744ca2921b1c07a8763a96fb0c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba482744ca2921b1c07a8763a96fb0c3">&#9670;&nbsp;</a></span>obstaclevector</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classobstacle.html">obstacle</a>&gt; karte::obstaclevector</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00032">32</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac4991b5dd1de78a4566de20b3e9fcf63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4991b5dd1de78a4566de20b3e9fcf63">&#9670;&nbsp;</a></span>renner</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SDL_Renderer* karte::renner</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00015">15</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad0088845e4b1ae492b21c162c7a235f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0088845e4b1ae492b21c162c7a235f3">&#9670;&nbsp;</a></span>spx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int karte::spx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00031">31</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a5e61fb31e1cedd603eae27809604a9fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e61fb31e1cedd603eae27809604a9fa">&#9670;&nbsp;</a></span>spy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int karte::spy</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00031">31</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a19c39e9cb2c3b57b5cba73f35b5c4bd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19c39e9cb2c3b57b5cba73f35b5c4bd1">&#9670;&nbsp;</a></span>walkable</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;bool&gt; &gt; karte::walkable</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8hpp_source.html#l00019">19</a> of file <a class="el" href="karte_8hpp_source.html">karte.hpp</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>rpg/header/<a class="el" href="karte_8hpp_source.html">karte.hpp</a></li>
-<li>rpg/src/<a class="el" href="karte_8cpp_source.html">karte.cpp</a></li>
+<li>rpg/source/<a class="el" href="karte_8cpp_source.html">karte.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

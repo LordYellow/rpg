@@ -9,13 +9,17 @@
     @section ver1 Start[14.07.18-17.07.18]
     @subsection ver1_sub1 Grundstein [14.07.18]
         Anlegen des Projectes
+        
         <b>added</b>
+        
         + Documentation
         + Todo list
         + Macros for debugging
     @subsection ver1_sub2 Karte [15.07.18]
         Erstellen einer Karte
+        
         <b>added</b>
+        
         + karte class
         + tile class
         + started to write down the time @12:00
@@ -26,18 +30,48 @@
         + map file now affects the plotted texture @16:45
         + added comments @17:49
         + added a "tool" to create maps @22:50 (yeah that took some time)
+        
         <b>changed</b>
+        
         - draw in title @13:43
         + sucesfully fixed a bug i caused by deleting something necessary by accident @15:32
     @subsection ver1_sub3 Player [16.07.18]
         Erstellen des Player
+        
         <b>added</b>
+        
         + player class @13:09
         + player textures @13:47
         + player movement with animations @15:34
     @subsection ver1_sub4 Collision [17.07.18]
         Added Collision
+        
         @todo Water animations 
+        
         <b>added</b>
+        
         + collision @14:00
+        
+    @subsection ver2_sub1 Rewrite anything [18.07.18]
+        
+        <b>Deleted</b>
+        
+        - Everything @13:00
+        
+        <b>added</b>
+        
+        + Degub Stuff @13:03
+        + Game Class @15:42
+        + Texture Class @16:42
+        + renderTexture function in Texture Class @21:06
+        
+    @subsection ver2_sub2 Karte [19.07.18]
+    
+        <b>added</b>
+        
+        + Karte can generate a map from a Mapfile (no collision atm) @16:15
+        + Draw function in Karte @16:25
+        + Map will now be drawn in the center @16:50
+        + Player. Movable, but no collision atm @20:50
+        + Camera Movment @21:28
 */

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dst',['dst',['../classplayer.html#a51ac4a57a2e2ea2ffd1ac82386ce617b',1,'player::dst()'],['../classtile.html#ad3b4ae05da2216dfb16e01a4fedbc384',1,'tile::dst()']]]
+  ['features',['features',['../feature__tests_8c.html#a1582568e32f689337602a16bf8a5bff0',1,'features():&#160;feature_tests.c'],['../feature__tests_8cxx.html#a1582568e32f689337602a16bf8a5bff0',1,'features():&#160;feature_tests.cxx']]]
 ];

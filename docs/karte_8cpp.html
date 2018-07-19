@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RPG: rpg/src/karte.cpp File Reference</title>
+<title>RPG: rpg/source/karte.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_71609f2fbdb19c7b5534f4fbfdad2c7d.html">rpg</a></li><li class="navelem"><a class="el" href="dir_f984ad916922cbbdf3f6f6cca3d76c45.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_71609f2fbdb19c7b5534f4fbfdad2c7d.html">rpg</a></li><li class="navelem"><a class="el" href="dir_33c2174d2b15f2fabc65ef15d3d9572c.html">source</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,47 +71,27 @@ $(function() {
 <div class="title">karte.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="rpg__definitions_8hpp_source.html">./../header/rpg_definitions.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="karte_8hpp_source.html">./../header/karte.hpp</a>&quot;</code><br />
-<code>#include &quot;SDL2/SDL.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="karte_8hpp_source.html">./../header/karte.hpp</a>&quot;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="debug_8hpp_source.html">./../header/debug.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for karte.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="karte_8cpp__incl.png" border="0" usemap="#rpg_2src_2karte_8cpp" alt=""/></div>
-<map name="rpg_2src_2karte_8cpp" id="rpg_2src_2karte_8cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="334,5,454,32"/>
-<area shape="rect" id="node2" href="rpg__definitions_8hpp.html" title=" " alt="" coords="44,379,238,405"/>
-<area shape="rect" id="node3" href="karte_8hpp.html" title=" " alt="" coords="325,80,464,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="178,155,237,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="218,453,314,480"/>
-<area shape="rect" id="node11" href="debug_8hpp.html" title=" " alt="" coords="575,379,720,405"/>
-<area shape="rect" id="node12" title=" " alt="" coords="771,453,826,480"/>
-<area shape="rect" id="node17" title=" " alt="" coords="796,80,862,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="312,155,359,181"/>
-<area shape="rect" id="node6" href="tiles_8cpp.html" title=" " alt="" coords="403,304,508,331"/>
-<area shape="rect" id="node15" href="obstacle_8cpp.html" title=" " alt="" coords="384,155,522,181"/>
-<area shape="rect" id="node7" href="tiles_8hpp.html" title=" " alt="" coords="314,379,448,405"/>
-<area shape="rect" id="node9" title=" " alt="" coords="338,453,477,480"/>
-<area shape="rect" id="node10" title=" " alt="" coords="501,453,573,480"/>
-<area shape="rect" id="node13" title=" " alt="" coords="597,453,656,480"/>
-<area shape="rect" id="node14" title=" " alt="" coords="680,453,746,480"/>
-<area shape="rect" id="node16" href="obstacle_8hpp.html" title=" " alt="" coords="363,229,522,256"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="karte_8cpp__dep__incl.png" border="0" usemap="#rpg_2src_2karte_8cppdep" alt=""/></div>
-<map name="rpg_2src_2karte_8cppdep" id="rpg_2src_2karte_8cppdep">
-<area shape="rect" id="node1" title=" " alt="" coords="129,5,249,32"/>
-<area shape="rect" id="node2" href="player_8hpp.html" title=" " alt="" coords="61,80,207,107"/>
-<area shape="rect" id="node5" href="rpg_8cpp.html" title=" " alt="" coords="151,304,237,331"/>
-<area shape="rect" id="node3" href="player_8cpp.html" title=" " alt="" coords="71,155,197,181"/>
-<area shape="rect" id="node4" href="events_8hpp.html" title=" " alt="" coords="5,229,156,256"/>
+<div class="center"><img src="karte_8cpp__incl.png" border="0" usemap="#rpg_2source_2karte_8cpp" alt=""/></div>
+<map name="rpg_2source_2karte_8cpp" id="rpg_2source_2karte_8cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="752,5,893,32"/>
+<area shape="rect" id="node2" href="karte_8hpp.html" title=" " alt="" coords="423,80,561,107"/>
+<area shape="rect" id="node12" title=" " alt="" coords="827,229,885,256"/>
+<area shape="rect" id="node13" title=" " alt="" coords="860,80,927,107"/>
+<area shape="rect" id="node3" href="rpg__definitions_8hpp.html" title=" " alt="" coords="5,229,144,256"/>
+<area shape="rect" id="node4" href="debug_8hpp.html" title=" " alt="" coords="168,229,259,256"/>
+<area shape="rect" id="node7" href="texture_8hpp.html" title=" " alt="" coords="445,155,539,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="518,304,573,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="177,304,249,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="283,229,379,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="403,229,517,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="541,229,680,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="705,229,751,256"/>
 </map>
 </div>
 </div>
@@ -121,8 +101,6 @@ This graph shows which files directly or indirectly include this file:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a3866ec8bebf719f18832fb6faa23ca6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="karte_8cpp.html#a3866ec8bebf719f18832fb6faa23ca6d">KARTE_CPP</a></td></tr>
 <tr class="separator:a3866ec8bebf719f18832fb6faa23ca6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa08a6c932380a99ff896d2b346db4369"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="karte_8cpp.html#aa08a6c932380a99ff896d2b346db4369">SCOPE_NAME</a>&#160;&#160;&#160;&quot;Karte&quot;</td></tr>
-<tr class="separator:aa08a6c932380a99ff896d2b346db4369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a3866ec8bebf719f18832fb6faa23ca6d"></a>
@@ -138,22 +116,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00002">2</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aa08a6c932380a99ff896d2b346db4369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa08a6c932380a99ff896d2b346db4369">&#9670;&nbsp;</a></span>SCOPE_NAME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SCOPE_NAME&#160;&#160;&#160;&quot;Karte&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="karte_8cpp_source.html#l00010">10</a> of file <a class="el" href="karte_8cpp_source.html">karte.cpp</a>.</p>
 
 </div>
 </div>

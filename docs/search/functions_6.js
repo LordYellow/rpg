@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notwalkable',['notwalkable',['../classtile.html#a4ba3bd03b7bf0239f4e641f482ea125e',1,'tile']]]
+  ['load',['load',['../classgame.html#a0302cac2b51c23424d9d2cf3c8a8e9aa',1,'game']]]
 ];

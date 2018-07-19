@@ -2,35 +2,23 @@
 #define KARTE_HPP
 
 #include "./rpg_definitions.hpp"
-#include <vector>
-#include <map>
-#include "../src/tiles.cpp"
-#include "./../src/obstacle.cpp"
-#define SCOPE_NAME "Karte"
 #include "./debug.hpp"
+#include "./texture.hpp"
+#include <vector>
 
 class karte{
 public:
-        karte(const char* path,  SDL_Renderer* renner);
-        SDL_Renderer *renner;
-        
-        //in this "map" every tile is stored. only the neede tiles will be drawn
-        std::vector<std::vector<tile>> field;
-        std::vector<std::vector<bool>> walkable;
-        
-        /**
-         * @brief draws the needed tiles
-         * 
-         * @param cx is used to change the part you see (x direction)
-         * @param cy is used to change the part you see (y direction)
-         */
-        void draw(int cx,  int cy);
-        void drawobstacle(int cx, int cy);
-        
-        // needed to draw the map in the center of the screen
-        int mapWidth,  mapHight,  spx,  spy;
-        std::vector<obstacle> obstaclevector;
+    karte(const char* path, texture* txp);
+    karte(){}
+    
+    void draw();
+    void changecxcy(double x, double y);
+private:
+    std::vector<std::vector<int>> tiles;
+    texture *textures;
+    int width, hight;
+    double cx, cy;
+    SDL_Rect rect = {0,0,PICSIZE, PICSIZE};
 };
 
-#undef SCOPE_NAME
 #endif

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tiles_5fcpp',['TILES_CPP',['../tiles_8cpp.html#a88176f082c7eb5b7734137cdbf5862d1',1,'tiles.cpp']]]
+  ['value',['VALUE',['../debug_8hpp.html#ad705dc78222473228fa826e42eca95f1',1,'debug.hpp']]],
+  ['valuetostring',['VALUETOSTRING',['../debug_8hpp.html#a13f12eb2841466cc0327e25123af4af4',1,'debug.hpp']]]
 ];
