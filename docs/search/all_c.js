@@ -2,7 +2,6 @@ var searchData=
 [
   ['rpg',['rpg',['../md_rpg_README.html',1,'']]],
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['rectangle',['rectangle',['../classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61',1,'texture']]],
   ['rendertexture',['renderTexture',['../classtexture.html#ad5a0bbb1b219b176d7f7ba0cc4889479',1,'texture']]],
   ['rpg_2ecpp',['rpg.cpp',['../rpg_8cpp.html',1,'']]],
   ['rpg_5fdefinitions_2ehpp',['rpg_definitions.hpp',['../rpg__definitions_8hpp.html',1,'']]],

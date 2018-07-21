@@ -4,15 +4,21 @@
 #include "./../header/karte.hpp"
 #include <fstream>
 #include <vector>
+#include <math.h>
 
 karte::karte(const char* path,  texture* txp){
     this->textures = txp;
     std::ifstream readmap(path);
     if(!readmap.is_open()){DEB_ERR("Could not Open mapfile")}
+    
+    //used to store the values of the tiles (later for the collision value)
     char c;
     std::string cs;
+    
+    
     std::vector<std::string> headline;
     readmap.get(c);
+    //this will read the headline and store the information
     if(c == '['){
         for(;;){
             readmap.get(c);
@@ -34,10 +40,12 @@ karte::karte(const char* path,  texture* txp){
     DEB_MSG_1("Kartentyp: " + headline[7])
     DEB_MSG_1("Colison Definition at: " + headline[8])
     
+    //now the important information of the headline will be stored
     int mapwidth = stoi(headline[3]), maphight = stoi(headline[4]), numberOfNumbers = stoi(headline[5]);
     txp->changeFilePath(0,headline[7]);
     std::vector<int> mapLine;
     
+    //now it will read the tile part of the mapfile
     try{
         for(;;){readmap.get(c); if(c == '#'){readmap.get(c); break;}}
         cs = "";
@@ -71,6 +79,39 @@ karte::karte(const char* path,  texture* txp){
         this->cy = (HIGHT-this->hight)/2*PICSIZE;
     }
     
+    //the following will set up the collision vector vector
+    std::vector<uint8_t> collisionline;
+    for(int i = 0; i < this->width+2; i++){collisionline.push_back(1);}
+    this->collisions.push_back(collisionline);
+    collisionline.clear();
+    
+    try{
+        for(;;){readmap.get(c); if(c == headline[8][0]){readmap.get(c); break;}}
+        cs = "";
+        for(int y = 0; y < maphight; y++){
+            collisionline.push_back(1);
+            for(int x = 0; x < mapwidth; x++){
+                for(int i = 0; i < 2; i++){
+                    readmap.get(c);
+                    cs+=c;
+                }
+                collisionline.push_back(stoi(cs));
+                cs = "";
+            }
+            readmap.get(c);
+            collisionline.push_back(1);
+            this->collisions.push_back(collisionline);
+            collisionline.clear();
+        }
+    }catch(...){DEB_ERR("mapfile not valid")}
+    
+    for(int i = 0; i < this->width+2; i++){collisionline.push_back(1);}
+    this->collisions.push_back(collisionline);
+    collisionline.clear();
+    
+    DEB_MSG_1("Collision Hight: " + _T(this->collisions.size()))
+    DEB_MSG_1("Collision Width: " + _T(this->collisions[0].size()))
+    
     readmap.close();
 }
 
@@ -79,6 +120,7 @@ void karte::draw(){
         this->rect.y = (y)*PICSIZE+this->cy;
         for(int x = 0; x < this->width; x++){
             this->rect.x = (x)*PICSIZE+this->cx;
+            //now the texture will be drawn at the position of the rectangle (the rectangle will move)
             this->textures->renderTexture(this->tiles[y][x] , 0, this->rect, PICSIZE, PICSIZE);
         }
     }
@@ -87,6 +129,11 @@ void karte::draw(){
 void karte::changecxcy(double x, double y){
     this->cx-=x;
     this->cy-=y;
+}
+
+uint8_t karte::getCollisionValue(int x, int y){
+        DEB_MSG_3("y: " + _T(y/PICSIZE-this->cy/PICSIZE+1) + " x: " + _T(x/PICSIZE-this->cx/PICSIZE+1))
+        return this->collisions[round(y/PICSIZE-this->cy/PICSIZE+1)][round(x/PICSIZE-this->cx/PICSIZE+1)];
 }
 
 #endif

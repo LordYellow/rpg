@@ -53,6 +53,7 @@
         + collision @14:00
         
     @subsection ver2_sub1 Rewrite anything [18.07.18]
+        I decided that it  would be the best to rewrite everything 
         
         <b>Deleted</b>
         
@@ -66,7 +67,8 @@
         + renderTexture function in Texture Class @21:06
         
     @subsection ver2_sub2 Karte [19.07.18]
-    
+        Finally the map is back. In better, but without collision atm :(
+        
         <b>added</b>
         
         + Karte can generate a map from a Mapfile (no collision atm) @16:15
@@ -74,4 +76,19 @@
         + Map will now be drawn in the center @16:50
         + Player. Movable, but no collision atm @20:50
         + Camera Movment @21:28
+        
+        @subsection ver2_sub3 Collision [20.07.18]
+        Its time to add collision
+        
+        <b>added</b>
+        
+        + Collision (only detects 1 tile atm, will be better later) @17:14
+        
+        @subsection ver2_sub4 Still dont know what i do today [21.07.18]
+        I will do something
+        
+        <b>added</b>
+        
+        
+        
 */

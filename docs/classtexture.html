@@ -63,7 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classtexture-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">texture Class Reference</div>  </div>
@@ -75,18 +74,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b39c01f880020998232047fb25bc2cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtexture.html#a7b39c01f880020998232047fb25bc2cb">texture</a> (SDL_Renderer *renner)</td></tr>
+<tr class="memdesc:a7b39c01f880020998232047fb25bc2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the textureloader with and SDL renderer  <a href="#a7b39c01f880020998232047fb25bc2cb">More...</a><br /></td></tr>
 <tr class="separator:a7b39c01f880020998232047fb25bc2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67c03ae3cb8184199ab3127ce0f610c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtexture.html#a67c03ae3cb8184199ab3127ce0f610c0">texture</a> ()</td></tr>
+<tr class="memdesc:a67c03ae3cb8184199ab3127ce0f610c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">that is an empty constructor. if you construct it this way dont use it  <a href="#a67c03ae3cb8184199ab3127ce0f610c0">More...</a><br /></td></tr>
 <tr class="separator:a67c03ae3cb8184199ab3127ce0f610c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a0bbb1b219b176d7f7ba0cc4889479"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtexture.html#ad5a0bbb1b219b176d7f7ba0cc4889479">renderTexture</a> (int textureID, uint8_t kindOfTexture, SDL_Rect dst, int hight, int width)</td></tr>
+<tr class="memdesc:ad5a0bbb1b219b176d7f7ba0cc4889479"><td class="mdescLeft">&#160;</td><td class="mdescRight">this will render the given texture at the position of the given rectangle  <a href="#ad5a0bbb1b219b176d7f7ba0cc4889479">More...</a><br /></td></tr>
 <tr class="separator:ad5a0bbb1b219b176d7f7ba0cc4889479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff3c0a060981e8606ac39b761de56478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtexture.html#aff3c0a060981e8606ac39b761de56478">changeFilePath</a> (uint8_t kindOfTexture, std::string newPath)</td></tr>
+<tr class="memdesc:aff3c0a060981e8606ac39b761de56478"><td class="mdescLeft">&#160;</td><td class="mdescRight">with this you can change the path to the texture file you wanna load  <a href="#aff3c0a060981e8606ac39b761de56478">More...</a><br /></td></tr>
 <tr class="separator:aff3c0a060981e8606ac39b761de56478"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a50eecc69405c6dd292f8ca95f0d4aa61"><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a> = {0,0,<a class="el" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>, <a class="el" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>}</td></tr>
-<tr class="separator:a50eecc69405c6dd292f8ca95f0d4aa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -107,6 +105,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>loads the textureloader with and SDL renderer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renner</td><td>is the sdl rendere you want </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="texture_8cpp_source.html#l00008">8</a> of file <a class="el" href="texture_8cpp_source.html">texture.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                    {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;renner = renner;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 5; i++){this-&gt;textureVector.push_back(<span class="keyword">nullptr</span>);} <span class="comment">// 0: map, 1: player, 2: npcs, 3: objects, 4: ui</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div></div><!-- fragment -->
@@ -135,8 +141,10 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="texture_8hpp_source.html#l00016">16</a> of file <a class="el" href="texture_8hpp_source.html">texture.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{}</div></div><!-- fragment -->
+<p>that is an empty constructor. if you construct it this way dont use it </p>
+
+<p class="definition">Definition at line <a class="el" href="texture_8hpp_source.html#l00025">25</a> of file <a class="el" href="texture_8hpp_source.html">texture.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{}</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -166,8 +174,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="texture_8cpp_source.html#l00029">29</a> of file <a class="el" href="texture_8cpp_source.html">texture.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                                                    {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this-&gt;filepaths[kindOfTexture] = <span class="stringliteral">&quot;./resources/&quot;</span> + newPath;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this-&gt;textureVector[kindOfTexture] = <span class="keyword">nullptr</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div></div><!-- fragment -->
+<p>with this you can change the path to the texture file you wanna load </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kindofTexture</td><td>specifies the kind of texture (see this-&gt;filepaths for detail) </td></tr>
+    <tr><td class="paramname">newPath</td><td>is the name of the new fiel. for some odd reason this file have to in in the same folder </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="texture_8cpp_source.html#l00035">35</a> of file <a class="el" href="texture_8cpp_source.html">texture.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                                    {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//here the filename (oddly named newPath) will be added to the path of the texture folder</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    this-&gt;filepaths[kindOfTexture] = <span class="stringliteral">&quot;./resources/&quot;</span> + newPath;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//this will reset the texture so the new one will be loaded the next time you need it</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    this-&gt;textureVector[kindOfTexture] = <span class="keyword">nullptr</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ad5a0bbb1b219b176d7f7ba0cc4889479"></a>
@@ -214,28 +231,22 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>this will render the given texture at the position of the given rectangle </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textureID</td><td>is the ID of the texture you wann draw </td></tr>
+    <tr><td class="paramname">kindOfTexture</td><td>specifies the kind of texture (see this-&gt;filepaths for detail) </td></tr>
+    <tr><td class="paramname">dst</td><td>is the rectangle specifying the position and size of the Texture you want to draw </td></tr>
+    <tr><td class="paramname">hight</td><td>is the hight of a texture in the given texture file </td></tr>
+    <tr><td class="paramname">width</td><td>is the width of a texture in the given texture file </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="texture_8cpp_source.html#l00013">13</a> of file <a class="el" href="texture_8cpp_source.html">texture.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                                                                                   {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span>(this-&gt;textureVector[kindOfTexture] == <span class="keyword">nullptr</span>){</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        this-&gt;textureVector[kindOfTexture] = SDL_CreateTextureFromSurface(this-&gt;renner, IMG_Load(this-&gt;filepaths[kindOfTexture].c_str()));</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> w, h;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    SDL_QueryTexture(this-&gt;textureVector[kindOfTexture], NULL, NULL, &amp;w, &amp;h);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.x = (textureID % (w/width))*width;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.y = ((textureID*width)/(w))*hight;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.y/hight) + <span class="stringliteral">&quot; &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.x/width))</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(textureID) + <span class="stringliteral">&quot;/&quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(w) + <span class="stringliteral">&quot;*&quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(hight))</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.h = hight;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.w = width;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;loading at x: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.x) + <span class="stringliteral">&quot; y: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>.y))</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    SDL_RenderCopy(this-&gt;renner, this-&gt;textureVector[kindOfTexture], &amp;this-&gt;<a class="code" href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">rectangle</a>, &amp;dst);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div><div class="ttc" id="classtexture_html_a50eecc69405c6dd292f8ca95f0d4aa61"><div class="ttname"><a href="classtexture.html#a50eecc69405c6dd292f8ca95f0d4aa61">texture::rectangle</a></div><div class="ttdeci">SDL_Rect rectangle</div><div class="ttdef"><b>Definition:</b> <a href="texture_8hpp_source.html#l00019">texture.hpp:19</a></div></div>
-<div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00174">debug.hpp:174</a></div></div>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                                                                                   {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//this will ckeck if the texture file is loaded. if not it will load it</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span>(this-&gt;textureVector[kindOfTexture] == <span class="keyword">nullptr</span>){</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        this-&gt;textureVector[kindOfTexture] = SDL_CreateTextureFromSurface(this-&gt;renner, IMG_Load(this-&gt;filepaths[kindOfTexture].c_str()));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> w, h;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    SDL_QueryTexture(this-&gt;textureVector[kindOfTexture], NULL, NULL, &amp;w, &amp;h);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//the textures in the texture files are arranged 2 dimensional, but you only use 1 number the acces all of them. because of that the following lines will determine the position in the picture form the textureID</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this-&gt;rectangle.x = (textureID % (w/width))*width;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;rectangle.y = ((textureID*width)/(w))*hight;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;rectangle.y/hight) + <span class="stringliteral">&quot; &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;rectangle.x/width))</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(textureID) + <span class="stringliteral">&quot;/&quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(w) + <span class="stringliteral">&quot;*&quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(hight))</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//this will also render the payer. Sadly the player is bigger than the tiles, and the ui and other stuff will be bigger to. because of that you need the hight and width of a texture in the given file</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    this-&gt;rectangle.h = hight;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    this-&gt;rectangle.w = width;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a>(<span class="stringliteral">&quot;loading at x: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;rectangle.x) + <span class="stringliteral">&quot; y: &quot;</span> + <a class="code" href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a>(this-&gt;rectangle.y))</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    SDL_RenderCopy(this-&gt;renner, this-&gt;textureVector[kindOfTexture], &amp;this-&gt;rectangle, &amp;dst);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div><div class="ttc" id="debug_8hpp_html_a8bd145c764f3c7360ec11574144cddc9"><div class="ttname"><a href="debug_8hpp.html#a8bd145c764f3c7360ec11574144cddc9">_T</a></div><div class="ttdeci">#define _T(s)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00174">debug.hpp:174</a></div></div>
 <div class="ttc" id="debug_8hpp_html_a5852b5e64b4795d4994b9c2c8bb68874"><div class="ttname"><a href="debug_8hpp.html#a5852b5e64b4795d4994b9c2c8bb68874">DEB_MSG_3</a></div><div class="ttdeci">#define DEB_MSG_3(str)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8hpp_source.html#l00280">debug.hpp:280</a></div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a50eecc69405c6dd292f8ca95f0d4aa61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50eecc69405c6dd292f8ca95f0d4aa61">&#9670;&nbsp;</a></span>rectangle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SDL_Rect texture::rectangle = {0,0,<a class="el" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>, <a class="el" href="rpg__definitions_8hpp.html#a3603b9392f4d2ef6b4b59af2f61bdeb9">PICSIZE</a>}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="texture_8hpp_source.html#l00019">19</a> of file <a class="el" href="texture_8hpp_source.html">texture.hpp</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
