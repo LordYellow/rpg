@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['load',['load',['../classgame.html#a0302cac2b51c23424d9d2cf3c8a8e9aa',1,'game']]]
+  ['karte',['karte',['../classkarte.html#ab01ab9f34c86ff98326c2770c6a392aa',1,'karte::karte(const char *path, texture *txp, config *configuration)'],['../classkarte.html#a43e0e55c71f66f9480d4eca09bf8371c',1,'karte::karte()']]]
 ];

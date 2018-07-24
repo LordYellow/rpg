@@ -40,4 +40,22 @@ void texture::changeFilePath(uint8_t kindOfTexture, std::string newPath){
     this->textureVector[kindOfTexture] = nullptr;
 }
 
+void texture::drawRectangle(SDL_Rect dst, SDL_Color color, bool fill){
+    SDL_SetRenderDrawColor(this->renner, color.r, color.g, color.b, SDL_ALPHA_OPAQUE);
+    if(fill){SDL_RenderFillRect(this->renner, &dst);}else{SDL_RenderDrawRect(this->renner, &dst);}
+}
+
+void texture::writeText(std::string message, SDL_Rect dst, int fontSize, SDL_Color color){
+    TTF_Font *font = TTF_OpenFont("./resources/Ubuntu Mono derivative Powerline Bold.ttf", fontSize);
+    if(font == nullptr){std::cout << TTF_GetError() << std::endl; return;}
+    SDL_Surface *surf = TTF_RenderText_Blended(font, message.c_str(), color);
+    if(surf == nullptr){std::cout << "surfaceeror" << std::endl; TTF_CloseFont(font); return;}
+    SDL_Texture *text = SDL_CreateTextureFromSurface(this->renner, surf);
+    if(text == nullptr){std::cout << "textureerror" << std::endl;}
+    SDL_FreeSurface(surf);
+    TTF_CloseFont(font);
+    SDL_QueryTexture(text, NULL, NULL, &dst.w, &dst.h);
+    SDL_RenderCopy(this->renner, text, NULL, &dst);
+}
+
 #endif

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['texture',['texture',['../classtexture.html#a7b39c01f880020998232047fb25bc2cb',1,'texture::texture(SDL_Renderer *renner)'],['../classtexture.html#a67c03ae3cb8184199ab3127ce0f610c0',1,'texture::texture()']]]
+  ['rendertexture',['renderTexture',['../classtexture.html#ad5a0bbb1b219b176d7f7ba0cc4889479',1,'texture']]],
+  ['run',['run',['../classgame.html#ac0989b3bcd3a7a806cd7c3211bc339e8',1,'game']]]
 ];

@@ -5,12 +5,15 @@
 #define PROJECT_NAME RPG
 #define PROJECT_VERSION 0
 
-#define PICSIZE 32
-#define HIGHT 20
-#define WIDTH 35
-#define SCREENHIGHT HIGHT*PICSIZE
-#define SCREENWIDTH WIDTH*PICSIZE
+//I am a fucking Genius
+#define PICSIZE (*this->configuration)["picsize"]
+#define HIGHT (*this->configuration)["hight"]
+#define WIDTH (*this->configuration)["width"]
+#define SCREENHIGHT (*this->configuration)["screenhight"]
+#define SCREENWIDTH (*this->configuration)["screenwidth"]
+#define SPEED (*this->configuration)["speed"]
+#define CONFIGPATH "./config"
 
-
+#include "./testing.hpp"
 
 #endif

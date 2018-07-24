@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keys',['keys',['../events_8hpp.html#a2c16ec6e52d5e4ca6cee1320b7b7379a',1,'events.hpp']]]
+  ['life',['life',['../classplayer.html#abdb3173ad79bf867bc7a9146387c53e4',1,'player']]]
 ];

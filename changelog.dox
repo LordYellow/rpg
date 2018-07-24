@@ -84,11 +84,35 @@
         
         + Collision (only detects 1 tile atm, will be better later) @17:14
         
-        @subsection ver2_sub4 Still dont know what i do today [21.07.18]
-        I will do something
+        @subsection ver2_sub4 Comments [21.07.18]
+        Today I commented my Code and fixed some issues i created today :)
         
         <b>added</b>
         
+        + Comments @12:00
         
+        @subsection ver2_sub5 Configfile [22.07.18]
+        Today I added a config file.
         
+        <b>added</b>\
+        
+        + Config class and file @14:04
+        + UI class (drawable, but no indicator for health, stamina, exp and gold atm) @16:48
+        
+        @subsection ver2_sub6 Ui [23.07.18]
+        Today I finish the Ui (for now)
+        
+        <b>added</b>
+        
+        + bars in ui now move @11:22
+        + Text can now be displayed @12:02
+        
+        @subsection ver2_sub7 Testing [24.07.18]
+        Today i do some testing stuff
+        
+        <b>added</b>
+        
+        + Test stuff @15:49
+        + Now compiles if you deactivate the Test stuff @17:01
+        + Enemys (for now they stand still, or move in one direction (and they move back after they reach their destination for obvious reasons) their name and health is displayed. no interaction atm) @19:56
 */

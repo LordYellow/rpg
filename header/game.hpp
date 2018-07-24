@@ -8,6 +8,8 @@
 #include "./texture.hpp"
 #include "./karte.hpp"
 #include "./player.hpp"
+#include "./config.hpp"
+#include "./enemy.hpp"
 
 class game{
 public:
@@ -57,6 +59,10 @@ private:
     
     //this is the player
     player spieler;
+    
+    config configuration;
+    
+    enemy testgegner;
     
     //event Stuff
     int filter();

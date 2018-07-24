@@ -4,7 +4,10 @@
 #include "./rpg_definitions.hpp"
 #include "./debug.hpp"
 #include "./texture.hpp"
+//#include "./game.hpp" //does not compile with this
 #include <vector>
+#include "./config.hpp"
+
 
 class karte{
 public:
@@ -14,7 +17,7 @@ public:
      * @param path it the path to the map file
      * @param txp is a pointer to your texturefolder
      */
-    karte(const char* path, texture* txp);
+    karte(const char* path, texture* txp, config* configuration);
     
     /**
      * @brief this is an empty contsructor. do not use
@@ -59,8 +62,10 @@ private:
     //with this you can change the position of of the map on the screen
     double cx, cy;
     
+    config *configuration;
+    
     //this rectangle is needed to draw the tiles 
-    SDL_Rect rect = {0,0,PICSIZE, PICSIZE};
+    SDL_Rect rect = {0,0,0, 0};
 };
 
 #endif

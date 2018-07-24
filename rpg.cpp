@@ -7,8 +7,12 @@ int filter(void* argumente, SDL_Event* event){
 }
 
 int main(){
+    STARTTEST
+    
     game spiel;
     spiel.load("./maps/testmap");
+    
+    STOPTEST("test")
     
     SDL_SetEventFilter(filter, NULL);
     
@@ -18,5 +22,7 @@ int main(){
     }
     
     spiel.stop();
+    
+    CLOSETEST
 }
 

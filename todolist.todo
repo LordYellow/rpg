@@ -35,6 +35,16 @@ kartenformat:   kopfzeile beliebig viele zeilen bsp: [autor, datum, uhrzeit, x, 
                 daten: 1011230699
                 collisions definition: ueberlegen
                 soll wissen ob map file valide ist
+
+5.5
+config Datei
+config datei soll nicht compiliert werden
+einstellungs change: einstellungsname = wert
+beliebig viele leerzeichen
+es muss nicht alles umgestelle werden
+changeable: paths, playerspeed,...
+fehler nicht uebernehmen
+unordere_map
                 
 6.
 Spieler braucht inventar leise ->leben, ausdauer, inventar, gold, erfahrung (placeholder)

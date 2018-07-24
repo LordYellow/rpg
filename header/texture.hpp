@@ -10,6 +10,7 @@
 #include <vector>
 #include <string>
 
+
 class texture{
 public:
     /**
@@ -42,9 +43,13 @@ public:
      * @param newPath is the name of the new fiel. for some odd reason this file have to in in the same folder
      */
     void changeFilePath(uint8_t kindOfTexture, std::string newPath);
+    
+    void drawRectangle(SDL_Rect dst, SDL_Color color, bool fill);
+    
+    void writeText(std::string message, SDL_Rect dst, int fontSize, SDL_Color color);
 private:
     //used to just take a part of the picture
-    SDL_Rect rectangle = {0,0,PICSIZE, PICSIZE};
+    SDL_Rect rectangle = {0,0,0, 0};
     
     //this is you renderer
     SDL_Renderer* renner;

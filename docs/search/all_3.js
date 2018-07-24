@@ -44,5 +44,6 @@ var searchData=
   ['debug_5fstrike',['DEBUG_STRIKE',['../debug_8hpp.html#acdf3bb3ad7c7df8676a78d81c99dc349',1,'debug.hpp']]],
   ['debug_5funderline',['DEBUG_UNDERLINE',['../debug_8hpp.html#ab4f2c6aa5f29c4d6c0dfe934a0b827d1',1,'debug.hpp']]],
   ['dec',['DEC',['../CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
-  ['draw',['draw',['../classkarte.html#adafe498843151be72982a4a143a8f863',1,'karte::draw()'],['../classplayer.html#a67423ce10d4abb42775868f978d04247',1,'player::draw()']]]
+  ['draw',['draw',['../classkarte.html#adafe498843151be72982a4a143a8f863',1,'karte::draw()'],['../classplayer.html#a67423ce10d4abb42775868f978d04247',1,'player::draw()'],['../classui.html#a9c49fb86fdbdeab9507b073643941034',1,'ui::draw()']]],
+  ['drawrectangle',['drawRectangle',['../classtexture.html#a5b9a995078ce974944cf7f45841dee6f',1,'texture']]]
 ];

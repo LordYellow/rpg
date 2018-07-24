@@ -10,7 +10,8 @@
 game::game(){
     //SDL init stuff
     if(SDL_Init(SDL_INIT_VIDEO) != 0){std::cout << "error: " << SDL_GetError() << std::endl; return;}
-    this->win = SDL_CreateWindow("Titel",100,200,SCREENWIDTH,SCREENHIGHT,SDL_WINDOW_SHOWN);
+    if(TTF_Init() != 0){std::cout << "error" << std::endl; SDL_Quit(); return;}
+    this->win = SDL_CreateWindow("Titel",100,200,this->configuration["screenwidth"],this->configuration["screenhight"],SDL_WINDOW_SHOWN);
     if(win == nullptr){std::cout << "winerror: " << SDL_GetError() << std::endl; SDL_Quit(); return;}
     this->renner = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if(renner == nullptr){SDL_DestroyWindow(this->win); std::cout << "renderererror: " << SDL_GetError() << std::endl; SDL_Quit(); return;}
@@ -28,6 +29,8 @@ void game::run(){
     
     //this draws the player
     this->spieler.draw();
+    
+    this->testgegner.update();
 
     SDL_RenderPresent(this->renner);
     SDL_Delay(1);
@@ -46,10 +49,12 @@ void game::load(const char* path){
     this->textureloader = texture(this->renner);
     
     //this loads the map at the given path
-    this->currentmap = karte(path, &textureloader);
+    this->currentmap = karte(path, &textureloader, &this->configuration);
     
     //this  loads the player
-    this->spieler = player(&this->textureloader, &this->currentmap, &this->keys);
+    this->spieler = player(&this->textureloader, &this->currentmap, &this->keys, &configuration);
+    
+    this->testgegner = enemy(450, 300, 3, "Stalin", 0, 450, 550, 2, &this->textureloader);
 }
 
 void game::handleEvents(){
@@ -67,7 +72,8 @@ void game::handleEvents(){
     if(keys[SDLK_s]){(this->spieler).move(0,1);}
     if(keys[SDLK_a]){(this->spieler).move(-1,0);}
     if(keys[SDLK_d]){(this->spieler).move(1,0);}
-    
+    if(keys[SDLK_t]){(this->spieler).life--;}
+    if(keys[SDLK_o]){this->currentmap = karte("./maps/testmap2", &textureloader, &this->configuration);} //lets call it a placeholder
 }
 
 void game::onQuit(){

@@ -6,10 +6,14 @@
 #include <vector>
 #include <math.h>
 
-karte::karte(const char* path,  texture* txp){
+karte::karte(const char* path,  texture* txp, config* configuration){
+    this->configuration = configuration;
     this->textures = txp;
     std::ifstream readmap(path);
     if(!readmap.is_open()){DEB_ERR("Could not Open mapfile")}
+    
+    this->rect.h = PICSIZE;
+    this->rect.w = PICSIZE;
     
     //used to store the values of the tiles (later for the collision value)
     char c;
@@ -17,18 +21,17 @@ karte::karte(const char* path,  texture* txp){
     
     
     std::vector<std::string> headline;
-    readmap.get(c);
     //this will read the headline and store the information
-    if(c == '['){
-        for(;;){
-            readmap.get(c);
-            if(c == '\n'){continue;}
-            if(c == ' ') continue;
-            if(c == ']'){headline.push_back(cs); cs = ""; DEB_MSG_1("i wanna break;") break;}
-            if(c == ','){headline.push_back(cs);  cs = ""; continue;}
+    for(;;){readmap.get(c); if(c == '['){ break;}else{if(readmap.eof()) DEB_ERR("File ended without Headline declaration")}}
+    for(;;){
+        readmap.get(c);
+        if(c == '\n'){continue;}
+        if(c == ' ') continue;
+        if(c == ']'){headline.push_back(cs); cs = ""; DEB_MSG_1("i wanna break;") break;}
+        if(c == ','){headline.push_back(cs);  cs = ""; continue;}
         cs+=c;
-        }
-    }else{DEB_ERR("mapfile not valid")}
+        if(!readmap.good()) DEB_ERR("Error reading file")
+    }
     if(headline.size() != 9){DEB_ERR("mapfile not valid")}
     DEB_MSG_1("Autor: " + headline[0])
     DEB_MSG_1("Datum: " + headline[1])
@@ -47,7 +50,7 @@ karte::karte(const char* path,  texture* txp){
     
     //now it will read the tile part of the mapfile
     try{
-        for(;;){readmap.get(c); if(c == '#'){readmap.get(c); break;}}
+        for(;;){readmap.get(c); if(c == '#'){readmap.get(c); break;}else{if(readmap.eof()) DEB_ERR("File ended without Map declaration")}}
         cs = "";
         for(int y = 0; y < maphight; y++){
             for(int x = 0; x < mapwidth; x++){
@@ -57,6 +60,7 @@ karte::karte(const char* path,  texture* txp){
                 }
                 mapLine.push_back(stoi(cs));
                 cs = "";
+                if(!readmap.good()) DEB_ERR("Error reading file")
             }
             readmap.get(c);
             this->tiles.push_back(mapLine);
@@ -86,7 +90,7 @@ karte::karte(const char* path,  texture* txp){
     collisionline.clear();
     
     try{
-        for(;;){readmap.get(c); if(c == headline[8][0]){readmap.get(c); break;}}
+        for(;;){readmap.get(c); if(c == headline[8][0]){readmap.get(c); break;}else if(readmap.eof()) DEB_ERR("File ended without Collision Declaration")}
         cs = "";
         for(int y = 0; y < maphight; y++){
             collisionline.push_back(1);
@@ -94,6 +98,7 @@ karte::karte(const char* path,  texture* txp){
                 for(int i = 0; i < 2; i++){
                     readmap.get(c);
                     cs+=c;
+                    if(!readmap.good()) DEB_ERR("Error reading file")
                 }
                 collisionline.push_back(stoi(cs));
                 cs = "";
