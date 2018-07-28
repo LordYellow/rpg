@@ -1,24 +1,18 @@
-#ifndef KARTE_CPP
-#define KARTE_CPP
-
 #include "./../header/karte.hpp"
-#include <fstream>
-#include <vector>
+#include "./../header/game.hpp" // is this ok?
 #include <math.h>
+#include <fstream>
 
-karte::karte(const char* path,  texture* txp, config* configuration){
-    this->configuration = configuration;
-    this->textures = txp;
+karte::karte(game* spiel, const char* path){
+    this->spiel = spiel;
+    this->rect.h = std::stoi(this->spiel->configuration["picsize"]);
+    this->rect.w = std::stoi(this->spiel->configuration["picsize"]);
+    
     std::ifstream readmap(path);
     if(!readmap.is_open()){DEB_ERR("Could not Open mapfile")}
     
-    this->rect.h = PICSIZE;
-    this->rect.w = PICSIZE;
-    
-    //used to store the values of the tiles (later for the collision value)
     char c;
     std::string cs;
-    
     
     std::vector<std::string> headline;
     //this will read the headline and store the information
@@ -45,7 +39,6 @@ karte::karte(const char* path,  texture* txp, config* configuration){
     
     //now the important information of the headline will be stored
     int mapwidth = stoi(headline[3]), maphight = stoi(headline[4]), numberOfNumbers = stoi(headline[5]);
-    txp->changeFilePath(0,headline[7]);
     std::vector<int> mapLine;
     
     //now it will read the tile part of the mapfile
@@ -71,22 +64,27 @@ karte::karte(const char* path,  texture* txp, config* configuration){
     this->width = mapwidth;
     this->hight = maphight;
     
-    if(this->width > WIDTH){
-        this->cx = -(this->width-WIDTH)/2*PICSIZE;
+    if(this->width > std::stoi(this->spiel->configuration["width"])){
+        this->cx = -(this->width-std::stoi(this->spiel->configuration["width"]))/2*std::stoi(this->spiel->configuration["picsize"]);
     }else{
-        this->cx = (WIDTH-this->width)/2*PICSIZE;
+        this->cx = (std::stoi(this->spiel->configuration["width"])-this->width)/2*std::stoi(this->spiel->configuration["picsize"]);
     }
     
-    if(this->hight > HIGHT){
-        this->cy = -(this->hight-HIGHT)/2*PICSIZE;
+    if(this->hight > std::stoi(this->spiel->configuration["hight"])){
+        this->cy = -(this->hight-std::stoi(this->spiel->configuration["hight"]))/2*std::stoi(this->spiel->configuration["picsize"]);
     }else{
-        this->cy = (HIGHT-this->hight)/2*PICSIZE;
+        this->cy = (std::stoi(this->spiel->configuration["hight"])-this->hight)/2*std::stoi(this->spiel->configuration["picsize"]);
     }
+    
+    DEB_MSG_1("cx: " + _T(this->cx) + " cy: " + _T(this->cy))
+    DEB_MSG_1("picsize: " + _T(std::stoi(this->spiel->configuration["picsize"])))
+    DEB_MSG_1("width: " + _T(std::stoi(this->spiel->configuration["width"])))
+    DEB_MSG_1("hight: " + _T(std::stoi(this->spiel->configuration["hight"])))
     
     //the following will set up the collision vector vector
     std::vector<uint8_t> collisionline;
     for(int i = 0; i < this->width+2; i++){collisionline.push_back(1);}
-    this->collisions.push_back(collisionline);
+    this->collision.push_back(collisionline);
     collisionline.clear();
     
     try{
@@ -105,28 +103,29 @@ karte::karte(const char* path,  texture* txp, config* configuration){
             }
             readmap.get(c);
             collisionline.push_back(1);
-            this->collisions.push_back(collisionline);
+            this->collision.push_back(collisionline);
             collisionline.clear();
         }
     }catch(...){DEB_ERR("mapfile not valid")}
     
     for(int i = 0; i < this->width+2; i++){collisionline.push_back(1);}
-    this->collisions.push_back(collisionline);
+    this->collision.push_back(collisionline);
     collisionline.clear();
     
-    DEB_MSG_1("Collision Hight: " + _T(this->collisions.size()))
-    DEB_MSG_1("Collision Width: " + _T(this->collisions[0].size()))
+    DEB_MSG_1("Collision Hight: " + _T(this->collision.size()))
+    DEB_MSG_1("Collision Width: " + _T(this->collision[0].size()))
     
     readmap.close();
 }
 
 void karte::draw(){
     for(int y = 0; y < this->hight; y++){
-        this->rect.y = (y)*PICSIZE+this->cy;
+        this->rect.y = y * std::stoi(this->spiel->configuration["picsize"]) + this->cy;
         for(int x = 0; x < this->width; x++){
-            this->rect.x = (x)*PICSIZE+this->cx;
-            //now the texture will be drawn at the position of the rectangle (the rectangle will move)
-            this->textures->renderTexture(this->tiles[y][x] , 0, this->rect, PICSIZE, PICSIZE);
+            this->rect.x = x * std::stoi(this->spiel->configuration["picsize"]) + this->cx;
+            DEB_MSG_3("drawing at x: " + _T(this->rect.x) + " y: " + _T(this->rect.y))
+            DEB_MSG_3("drawing with: picsize: " + _T(std::stoi(this->spiel->configuration["picsize"])) + " cx: " + _T(this->cx) + " cy: " + _T(this->cy) + "between 0 and " + _T(this->hight) + " and between 0 and " + _T(this->width))
+            this->spiel->texture.renderTexture(this->tiles[y][x], this->spiel->configuration["mapPath"], this->rect, std::stoi(this->spiel->configuration["picsize"]), std::stoi(this->spiel->configuration["picsize"]));
         }
     }
 }
@@ -137,8 +136,5 @@ void karte::changecxcy(double x, double y){
 }
 
 uint8_t karte::getCollisionValue(int x, int y){
-        DEB_MSG_3("y: " + _T(y/PICSIZE-this->cy/PICSIZE+1) + " x: " + _T(x/PICSIZE-this->cx/PICSIZE+1))
-        return this->collisions[round(y/PICSIZE-this->cy/PICSIZE+1)][round(x/PICSIZE-this->cx/PICSIZE+1)];
+    return this->collision[round(y/std::stoi(this->spiel->configuration["picsize"])-this->cy/std::stoi(this->spiel->configuration["picsize"])+1)][round(x/std::stoi(this->spiel->configuration["picsize"])-this->cx/std::stoi(this->spiel->configuration["picsize"])+1)];
 }
-
-#endif

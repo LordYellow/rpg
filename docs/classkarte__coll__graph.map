@@ -1,8 +1,0 @@
-<map id="karte" name="karte">
-<area shape="rect" id="node1" title=" " alt="" coords="565,65,616,92"/>
-<area shape="rect" id="node2" title=" " alt="" coords="270,7,427,33"/>
-<area shape="rect" id="node3" href="$classobstacle.html" title=" " alt="" coords="93,7,164,33"/>
-<area shape="rect" id="node4" href="$classtile.html" title=" " alt="" coords="5,7,44,33"/>
-<area shape="rect" id="node5" title=" " alt="" coords="269,58,428,99"/>
-<area shape="rect" id="node6" title=" " alt="" coords="269,123,428,165"/>
-</map>

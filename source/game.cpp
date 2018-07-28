@@ -1,91 +1,57 @@
-#ifndef GAME_CPP
-#define GAME_CPP
-
 #include "./../header/game.hpp"
-#include "./../header/rpg_definitions.hpp"
-#include "./../header/debug.hpp"
 
-//do not use the namespace std!
-
-game::game(){
+game::game(void){
     //SDL init stuff
     if(SDL_Init(SDL_INIT_VIDEO) != 0){std::cout << "error: " << SDL_GetError() << std::endl; return;}
     if(TTF_Init() != 0){std::cout << "error" << std::endl; SDL_Quit(); return;}
-    this->win = SDL_CreateWindow("Titel",100,200,this->configuration["screenwidth"],this->configuration["screenhight"],SDL_WINDOW_SHOWN);
+    this->win = SDL_CreateWindow("Titel",100,200,std::stoi(this->configuration["screenwidth"]),std::stoi(this->configuration["screenhight"]),SDL_WINDOW_SHOWN);
     if(win == nullptr){std::cout << "winerror: " << SDL_GetError() << std::endl; SDL_Quit(); return;}
     this->renner = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if(renner == nullptr){SDL_DestroyWindow(this->win); std::cout << "renderererror: " << SDL_GetError() << std::endl; SDL_Quit(); return;}
 }
 
-void game::run(){
-    DEB_MSG_3("running")
-    
-    //clears anything
-    SDL_SetRenderDrawColor(this->renner, 0,0,0,0);
-    SDL_RenderClear(this->renner);
-    
-    //this draws the map
-    this->currentmap.draw();
-    
-    //this draws the player
-    this->spieler.draw();
-    
-    this->testgegner.update();
-
-    SDL_RenderPresent(this->renner);
-    SDL_Delay(1);
-}
-
-void game::stop(){
-    //ends the sdl stuff. i think i could write this into the destructor, but tbh im not entirely sure how a destructor works
+game::~game(void){
     SDL_DestroyRenderer(this->renner);
     SDL_DestroyWindow(this->win);
     SDL_Quit();
 }
 
-void game::load(const char* path){
+void game::update(){
+    DEB_MSG_3("running")
     
-    //loads the textureloader
-    this->textureloader = texture(this->renner);
+    SDL_SetRenderDrawColor(this->renner, 0, 0, 0, 0);
+    SDL_RenderClear(this->renner);
     
-    //this loads the map at the given path
-    this->currentmap = karte(path, &textureloader, &this->configuration);
+    this->map.draw();
+    this->spieler.draw();
     
-    //this  loads the player
-    this->spieler = player(&this->textureloader, &this->currentmap, &this->keys, &configuration);
-    
-    this->testgegner = enemy(450, 300, 3, "Stalin", 0, 450, 550, 2, &this->textureloader);
+    SDL_RenderPresent(this->renner);\
+    SDL_Delay(1);
 }
 
 void game::handleEvents(){
-    //looks for events
     if(SDL_PollEvent(&this->event)){
         switch(this->event.type){
-            case SDL_QUIT: this->onQuit(); break;
-            case SDL_KEYDOWN: this->onKeyDown(); break;
-            case SDL_KEYUP: this->onKeyUp(); break;
+            case SDL_QUIT: this->stateOfGame = GAMEOVER; break;
+            case SDL_KEYDOWN: this->keys[this->event.key.keysym.sym] = 1; break;
+            case SDL_KEYUP: this->keys[this->event.key.keysym.sym] = 0; break;
         }
     }
     
-    //wasd commands the palyer to move
-    if(keys[SDLK_w]){(this->spieler).move(0,-1);}
-    if(keys[SDLK_s]){(this->spieler).move(0,1);}
-    if(keys[SDLK_a]){(this->spieler).move(-1,0);}
-    if(keys[SDLK_d]){(this->spieler).move(1,0);}
-    if(keys[SDLK_t]){(this->spieler).life--;}
-    if(keys[SDLK_o]){this->currentmap = karte("./maps/testmap2", &textureloader, &this->configuration);} //lets call it a placeholder
+    switch(this->stateOfGame){
+        case RUNNING:
+            if(keys[SDLK_w]){(this->spieler).doMove(0,-1);}
+            if(keys[SDLK_s]){(this->spieler).doMove(0,1);}
+            if(keys[SDLK_a]){(this->spieler).doMove(-1,0);}
+            if(keys[SDLK_d]){(this->spieler).doMove(1,0);}
+            break;
+        
+        default: break;
+    }
 }
 
-void game::onQuit(){
-    this->running = 0;
+void game::load(const char* path){
+    this->map = karte(this, "./maps/testmap");
+    this->texture = textureloader(this->renner, this);
+    this->spieler = player(this, "./resources/player.png");
 }
-
-void game::onKeyDown(){
-    this->keys[this->event.key.keysym.sym] = 1;
-}
-
-void game::onKeyUp(){
-    this->keys[this->event.key.keysym.sym] = 0;
-}
-
-#endif

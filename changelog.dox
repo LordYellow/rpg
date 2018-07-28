@@ -115,4 +115,15 @@
         + Test stuff @15:49
         + Now compiles if you deactivate the Test stuff @17:01
         + Enemys (for now they stand still, or move in one direction (and they move back after they reach their destination for obvious reasons) their name and health is displayed. no interaction atm) @19:56
+        
+        @subsection ver3_sub1 reorganize everything [26.07.18]
+        Its Hot af
+        
+        <b>Deleted</b>
+        
+        - Everything @i forgot the time sorry
+        
+        <b>added</b>
+        
+        + Solved the recursive inclusion problem @23:34
 */

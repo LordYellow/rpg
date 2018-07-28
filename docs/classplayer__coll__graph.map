@@ -1,11 +1,13 @@
 <map id="player" name="player">
-<area shape="rect" id="node1" title=" " alt="" coords="723,131,780,157"/>
-<area shape="rect" id="node2" href="$classkarte.html" title=" " alt="" coords="580,99,631,125"/>
-<area shape="rect" id="node3" title=" " alt="" coords="270,7,427,33"/>
-<area shape="rect" id="node4" href="$classobstacle.html" title=" " alt="" coords="93,7,164,33"/>
-<area shape="rect" id="node5" href="$classtile.html" title=" " alt="" coords="5,7,44,33"/>
-<area shape="rect" id="node6" title=" " alt="" coords="269,58,428,99"/>
-<area shape="rect" id="node7" title=" " alt="" coords="269,123,428,165"/>
-<area shape="rect" id="node8" title="STL class." alt="" coords="565,156,645,183"/>
-<area shape="rect" id="node9" title="STL class." alt="" coords="285,189,412,230"/>
+<area shape="rect" id="node1" title=" " alt="" coords="11,319,68,345"/>
+<area shape="rect" id="node4" href="$classgame.html" title=" " alt="" coords="227,408,281,435"/>
+<area shape="rect" id="node2" href="$classcharacter.html" title=" " alt="" coords="5,573,81,600"/>
+<area shape="rect" id="node3" href="$classentity.html" title=" " alt="" coords="227,497,281,524"/>
+<area shape="rect" id="node5" href="$classconfig.html" title=" " alt="" coords="99,319,156,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="303,200,440,256"/>
+<area shape="rect" id="node7" title="STL class." alt="" coords="425,96,505,123"/>
+<area shape="rect" id="node8" title="STL class." alt="" coords="401,5,528,47"/>
+<area shape="rect" id="node9" title=" " alt="" coords="181,319,314,345"/>
+<area shape="rect" id="node10" href="$classkarte.html" title=" " alt="" coords="338,319,389,345"/>
+<area shape="rect" id="node11" href="$classtextureloader.html" title=" " alt="" coords="413,319,511,345"/>
 </map>

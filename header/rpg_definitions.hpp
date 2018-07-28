@@ -5,7 +5,12 @@
 #define PROJECT_NAME RPG
 #define PROJECT_VERSION 0
 
-//I am a fucking Genius
+#define GAMEOVER 0
+#define RUNNING 1
+#define PAUSED 2
+#define DIALOG 3
+
+/*
 #define PICSIZE (*this->configuration)["picsize"]
 #define HIGHT (*this->configuration)["hight"]
 #define WIDTH (*this->configuration)["width"]
@@ -13,7 +18,6 @@
 #define SCREENWIDTH (*this->configuration)["screenwidth"]
 #define SPEED (*this->configuration)["speed"]
 #define CONFIGPATH "./config"
-
-#include "./testing.hpp"
+*/
 
 #endif

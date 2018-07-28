@@ -42,5 +42,6 @@ var searchData=
   ['debug_5fslow_5fblink',['DEBUG_SLOW_BLINK',['../debug_8hpp.html#a3da9282b8c8b13e884188f3deb162e43',1,'debug.hpp']]],
   ['debug_5fstrike',['DEBUG_STRIKE',['../debug_8hpp.html#acdf3bb3ad7c7df8676a78d81c99dc349',1,'debug.hpp']]],
   ['debug_5funderline',['DEBUG_UNDERLINE',['../debug_8hpp.html#ab4f2c6aa5f29c4d6c0dfe934a0b827d1',1,'debug.hpp']]],
-  ['dec',['DEC',['../CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]]
+  ['dec',['DEC',['../CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
+  ['dialog',['DIALOG',['../rpg__definitions_8hpp.html#a166ac342442c094ad07699a279bef6f4',1,'rpg_definitions.hpp']]]
 ];

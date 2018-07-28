@@ -1,7 +1,6 @@
 var searchData=
 [
   ['changecxcy',['changecxcy',['../classkarte.html#a165c9afc09e4aa66908e012e547bb99e',1,'karte']]],
-  ['changefilepath',['changeFilePath',['../classtexture.html#aff3c0a060981e8606ac39b761de56478',1,'texture']]],
-  ['closetest',['closeTest',['../testing_8hpp.html#ac44827a94ed4979f2c0ec5c0c20bc0ce',1,'closeTest():&#160;testing.cpp'],['../testing_8cpp.html#ac44827a94ed4979f2c0ec5c0c20bc0ce',1,'closeTest():&#160;testing.cpp']]],
+  ['character',['character',['../classcharacter.html#aa705715e75e6d3065f30ada3eaba7410',1,'character::character(game *spiel, std::string kindOfTexture)'],['../classcharacter.html#af0c70d696a85a0c1eaeff23d5e0d869c',1,'character::character(void)']]],
   ['config',['config',['../classconfig.html#ab1b245308f26ce7979e4c37e93869706',1,'config']]]
 ];

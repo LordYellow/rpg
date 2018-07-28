@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ui',['ui',['../classui.html#adcbe9286254f560cd5733da8798db48d',1,'ui::ui(config *configuration, texture *textures)'],['../classui.html#a4abce35d167b4b7ef75ce347f7fbfb7c',1,'ui::ui()']]],
-  ['update',['update',['../classenemy.html#a4635115bdb4183b30961db2ef78999c1',1,'enemy']]]
+  ['walkable',['walkable',['../classplayer.html#a42ed52caa52b264ee5ded809baca673e',1,'player']]],
+  ['writetext',['writeText',['../classtextureloader.html#a7928391d9e6e5e15beaa2692d0e80fb0',1,'textureloader']]]
 ];

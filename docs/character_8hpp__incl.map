@@ -1,0 +1,9 @@
+<map id="rpg/header/character.hpp" name="rpg/header/character.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="130,5,297,32"/>
+<area shape="rect" id="node2" href="$entity_8hpp.html" title=" " alt="" coords="170,80,257,107"/>
+<area shape="rect" id="node3" href="$rpg__definitions_8hpp.html" title=" " alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$debug_8hpp.html" title=" " alt="" coords="168,155,259,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="283,155,379,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="142,229,197,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="221,229,293,256"/>
+</map>

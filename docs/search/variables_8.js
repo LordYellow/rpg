@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['spx',['spx',['../classkarte.html#ad0088845e4b1ae492b21c162c7a235f3',1,'karte']]],
-  ['spy',['spy',['../classkarte.html#a5e61fb31e1cedd603eae27809604a9fa',1,'karte']]]
+  ['rectangle',['rectangle',['../classentity.html#a02246cc212e486a100bdafbe81de25fd',1,'entity']]],
+  ['renner',['renner',['../classgame.html#a7f72a66e9148d9170269205417e5986a',1,'game']]]
 ];

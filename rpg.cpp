@@ -3,26 +3,17 @@
 #include "./header/game.hpp"
 
 int filter(void* argumente, SDL_Event* event){
-  return !(event->type == SDL_MOUSEMOTION);
+    return !(event->type == SDL_MOUSEMOTION );
 }
 
 int main(){
-    STARTTEST
-    
-    game spiel;
-    spiel.load("./maps/testmap");
-    
-    STOPTEST("test")
-    
     SDL_SetEventFilter(filter, NULL);
     
-    while(spiel.running){
+    game spiel;
+    spiel.load("atm this has no purpose");
+    
+    while(spiel.getStateOfGame()){
         spiel.handleEvents();
-        if(spiel.running == 1) spiel.run();
+        if(spiel.getStateOfGame() == 1) spiel.update();
     }
-    
-    spiel.stop();
-    
-    CLOSETEST
 }
-
