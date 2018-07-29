@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rectangle',['rectangle',['../classentity.html#a02246cc212e486a100bdafbe81de25fd',1,'entity']]],
-  ['renner',['renner',['../classgame.html#a7f72a66e9148d9170269205417e5986a',1,'game']]]
+  ['keys',['keys',['../classgame.html#a45dba8cf983aad787fa27dc244643108',1,'game']]],
+  ['kindoftexture',['kindOfTexture',['../classentity.html#ac7ac1eb6f97dc12e5b94d90e1f05ecaa',1,'entity']]]
 ];

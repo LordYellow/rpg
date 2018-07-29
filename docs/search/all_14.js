@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yellowdebug',['YELLOWDEBUG',['../debug_8hpp.html#aa3df6225c8bcee82b99163807c1b2a13',1,'YELLOWDEBUG():&#160;debug.hpp'],['../rpg__definitions_8hpp.html#aa3df6225c8bcee82b99163807c1b2a13',1,'YELLOWDEBUG():&#160;rpg_definitions.hpp']]]
+  ['value',['VALUE',['../debug_8hpp.html#ad705dc78222473228fa826e42eca95f1',1,'debug.hpp']]],
+  ['valuetostring',['VALUETOSTRING',['../debug_8hpp.html#a13f12eb2841466cc0327e25123af4af4',1,'debug.hpp']]]
 ];

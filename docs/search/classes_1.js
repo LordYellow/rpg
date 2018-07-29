@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entity',['entity',['../classentity.html',1,'']]]
+  ['dialog',['dialog',['../classdialog.html',1,'']]]
 ];

@@ -9,7 +9,7 @@ public:
     character(void){}
     
     void draw();
-    virtual void move(){}
+    virtual void update(){}
 protected:
     double animation = 0;
     uint8_t direction = 0;

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['walkable',['walkable',['../classplayer.html#a42ed52caa52b264ee5ded809baca673e',1,'player']]],
-  ['writetext',['writeText',['../classtextureloader.html#a7928391d9e6e5e15beaa2692d0e80fb0',1,'textureloader']]]
+  ['textureloader',['textureloader',['../classtextureloader.html#ae3bf03474c4b263f4eaf2dc1e08470fc',1,'textureloader::textureloader(SDL_Renderer *renner, game *spiel)'],['../classtextureloader.html#a60321ea0829f85040d55fba60b9eecdc',1,'textureloader::textureloader(void)']]]
 ];

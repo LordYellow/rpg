@@ -24,6 +24,8 @@ void game::update(){
     
     this->map.draw();
     this->spieler.draw();
+    this->testnpc.draw();
+    this->testnpc.showDialog(false);
     
     SDL_RenderPresent(this->renner);\
     SDL_Delay(1);
@@ -54,4 +56,5 @@ void game::load(const char* path){
     this->map = karte(this, "./maps/testmap");
     this->texture = textureloader(this->renner, this);
     this->spieler = player(this, "./resources/player.png");
+    this->testnpc = npc(this, "./resources/player.png", "./testdialog");
 }

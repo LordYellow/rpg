@@ -11,6 +11,7 @@
 #include "./config.hpp"
 #include "./textureloader.hpp"
 #include "./player.hpp"
+#include "./npc.hpp"
 
 class game{
 public:
@@ -35,7 +36,7 @@ public:
     karte map;
     player spieler;
     config configuration;
-    //npc
+    npc testnpc;
     
 };
 
