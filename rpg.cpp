@@ -14,6 +14,6 @@ int main(){
     
     while(spiel.getStateOfGame()){
         spiel.handleEvents();
-        if(spiel.getStateOfGame() == 1) spiel.update();
+        if(spiel.getStateOfGame() == RUNNING || spiel.getStateOfGame() == DIALOG) spiel.update();
     }
 }

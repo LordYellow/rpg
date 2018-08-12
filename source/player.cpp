@@ -1,7 +1,7 @@
 #include "./../header/player.hpp"
 #include "./../header/game.hpp"
 
-player::player(game* spiel, std::string kindOfTexture): character(spiel, kindOfTexture){
+player::player(game* spiel, std::string kindOfTexture, int x, int y): character(spiel, kindOfTexture, 0, 0){
     this->rectangle.x = std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2;
     this->rectangle.y = std::stoi(this->spiel->configuration["screenhight"])/2-std::stoi(this->spiel->configuration["playerHight"])/2;
     this->rectangle.w = std::stoi(this->spiel->configuration["playerWidth"]);
@@ -19,6 +19,9 @@ player::player(game* spiel, std::string kindOfTexture): character(spiel, kindOfT
     
     this->barrect.h = 6;
     this->goldrect.h = 32;
+    
+    spiel->map.cx = x + std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2;
+    spiel->map.cy = y + std::stoi(this->spiel->configuration["screenhight"])/2-std::stoi(this->spiel->configuration["playerHight"])/2;
 }
 
 void player::update(){
@@ -32,16 +35,22 @@ void player::doMove(int x, int y){
     }else{
         this->direction = ((x>0)?2:1);
     }
-    if(this->walkable(x, y)){
-        this->spiel->map.changecxcy(x*std::stoi(this->spiel->configuration["speed"]), y*std::stoi(this->spiel->configuration["speed"]));
+    
+    this->spiel->map.changecxcy(x*std::stoi(this->spiel->configuration["speed"]), y*std::stoi(this->spiel->configuration["speed"]));
+    
+    if(!this->walkable(x, y)){
+        this->spiel->map.changecxcy(-x*std::stoi(this->spiel->configuration["speed"]), -y*std::stoi(this->spiel->configuration["speed"]));
     }
     this->animation+=0.1;
 }
 
 bool player::walkable(int x, int y){
-    //placeholder
-    //uint8_t ptw = this->spiel->map.getCollisionValue((rectangle.x + x*std::stoi(this->spiel->configuration["picsize"])/32 + 16), (rectangle.y + y*std::stoi(this->spiel->configuration["picsize"])/32 + 32));
-    return true;
+    //working
+    double px = round((std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2)/std::stoi(this->spiel->configuration["picsize"]) - (this->spiel->map.cx)/std::stoi(this->spiel->configuration["picsize"]));
+    double py = round((std::stoi(this->spiel->configuration["screenhight"])/2-std::stoi(this->spiel->configuration["playerHight"])/2)/std::stoi(this->spiel->configuration["picsize"]) - this->spiel->map.cy/std::stoi(this->spiel->configuration["picsize"])) +1;
+    uint8_t ptw = this->spiel->map.getCollisionValue(px+1, py+1);
+    
+    return !ptw;
 }
 
 void player::showUi(){
@@ -81,4 +90,14 @@ void player::showUi(){
     this->color.g = 168;
     this->color.b = 0;
     this->spiel->texture.writeText("12", this->goldrect, 40, this->color);
+}
+
+double player::distanceToNpc(npc npcForDistance){
+    
+}
+
+void player::interact(){
+    
+    
+    this->spiel->stateOfGame = DIALOG;
 }

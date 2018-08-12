@@ -23,9 +23,8 @@ void game::update(){
     SDL_RenderClear(this->renner);
     
     this->map.draw();
+    for(size_t i = 0; i < this->npcvector.size(); i++){this->npcvector[i].draw();}
     this->spieler.draw();
-    this->testnpc.draw();
-    this->testnpc.showDialog(false);
     
     SDL_RenderPresent(this->renner);\
     SDL_Delay(1);
@@ -46,8 +45,11 @@ void game::handleEvents(){
             if(keys[SDLK_s]){(this->spieler).doMove(0,1);}
             if(keys[SDLK_a]){(this->spieler).doMove(-1,0);}
             if(keys[SDLK_d]){(this->spieler).doMove(1,0);}
+            if(keys[SDLK_e]){(this->spieler).interact();}
             break;
-        
+        case DIALOG:
+            
+            break;
         default: break;
     }
 }
@@ -55,6 +57,6 @@ void game::handleEvents(){
 void game::load(const char* path){
     this->map = karte(this, "./maps/testmap");
     this->texture = textureloader(this->renner, this);
-    this->spieler = player(this, "./resources/player.png");
-    this->testnpc = npc(this, "./resources/player.png", "./testdialog");
+    this->spieler = player(this, "./resources/player.png", -100,-50);
+    this->npcvector.push_back(npc(this, "./resources/player.png", "./testdialog",200,500));
 }

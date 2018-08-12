@@ -9,12 +9,13 @@ class game;
 
 class entity{
 public:
-    entity(game* spiel, std::string kindOfTexture);
+    entity(game* spiel, std::string kindOfTexture, int x, int y);
     entity(void){}
 protected:
     SDL_Rect rectangle;
     game* spiel;
     std::string kindOfTexture;
+    int x, y;
 };
 
 #endif

@@ -136,5 +136,5 @@ void karte::changecxcy(double x, double y){
 }
 
 uint8_t karte::getCollisionValue(int x, int y){
-    return this->collision[round(y/std::stoi(this->spiel->configuration["picsize"])-this->cy/std::stoi(this->spiel->configuration["picsize"])+1)][round(x/std::stoi(this->spiel->configuration["picsize"])-this->cx/std::stoi(this->spiel->configuration["picsize"])+1)];
+    return this->collision[y][x];
 }

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['textureloader',['textureloader',['../classtextureloader.html#ae3bf03474c4b263f4eaf2dc1e08470fc',1,'textureloader::textureloader(SDL_Renderer *renner, game *spiel)'],['../classtextureloader.html#a60321ea0829f85040d55fba60b9eecdc',1,'textureloader::textureloader(void)']]]
+  ['showdialog',['showDialog',['../classdialog.html#a798dc7498918ffd3f22d8a3e1e0c6af4',1,'dialog::showDialog()'],['../classnpc.html#a2df7fa8edd23bc6b8148492b347d7763',1,'npc::showDialog()']]],
+  ['showui',['showUi',['../classplayer.html#a1c7d037f90992e3e7273565f2e425c0a',1,'player']]]
 ];

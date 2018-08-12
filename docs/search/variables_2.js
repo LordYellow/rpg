@@ -4,5 +4,7 @@ var searchData=
   ['configmap',['configmap',['../classconfig.html#a14b459addf0f840250ba6ba6fc75205e',1,'config']]],
   ['configuration',['configuration',['../classgame.html#a1280875125ae5ca3f4bbc3a01475fd89',1,'game']]],
   ['currentmessage',['currentMessage',['../classdialog.html#a79b2ca747041f1942e310a1bfed80ef6',1,'dialog']]],
-  ['currentposition',['currentPosition',['../classdialog.html#a514174ed5ef85c70371cb24b1fdcdf1f',1,'dialog']]]
+  ['currentposition',['currentPosition',['../classdialog.html#a514174ed5ef85c70371cb24b1fdcdf1f',1,'dialog']]],
+  ['cx',['cx',['../classkarte.html#a7cc11cfb22d950e877ccf63df82f913e',1,'karte']]],
+  ['cy',['cy',['../classkarte.html#a3929b997fecf0f5c5f1b9a5399eca82e',1,'karte']]]
 ];

@@ -11,5 +11,5 @@
 [uiHight = 78]
 [uiWidth = 232]
 [dialogTexture = ./resources/dialog.png]
-[dialogWidth = 256]
+[dialogWidth = 255]
 [dialogHight = 98]

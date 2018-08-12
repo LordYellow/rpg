@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rendertexture',['renderTexture',['../classtextureloader.html#ac3909d6539e0c8716c1269eacfc7a715',1,'textureloader']]]
+  ['player',['player',['../classplayer.html#af664872acc2503f1074f06df0e0260fa',1,'player::player(game *spiel, std::string kindOfTexture, int x, int y)'],['../classplayer.html#ad34fa3644a9b0a8fb1ff565f2b5adbd2',1,'player::player(void)']]]
 ];

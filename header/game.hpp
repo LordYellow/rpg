@@ -7,6 +7,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
 #include <map>
+#include <vector>
 #include "./karte.hpp"
 #include "./config.hpp"
 #include "./textureloader.hpp"
@@ -37,7 +38,7 @@ public:
     player spieler;
     config configuration;
     npc testnpc;
-    
+    std::vector<npc> npcvector;
 };
 
 #endif

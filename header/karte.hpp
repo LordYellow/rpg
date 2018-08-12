@@ -19,6 +19,8 @@ public:
     
     uint8_t getCollisionValue(int x, int y);
     
+    double cx, cy;
+    
 private:
     game* spiel;
     
@@ -27,8 +29,6 @@ private:
     std::vector<std::vector<uint8_t>> collision;
     
     int width = 20, hight = 20;
-    
-    double cx, cy;
     
     SDL_Rect rect = {0,0,0,0};
 };

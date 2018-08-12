@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['showdialog',['showDialog',['../classdialog.html#a798dc7498918ffd3f22d8a3e1e0c6af4',1,'dialog::showDialog()'],['../classnpc.html#a0ef840a7385f0a8162935f6acec28ae9',1,'npc::showDialog()']]],
+  ['showdialog',['showDialog',['../classdialog.html#a798dc7498918ffd3f22d8a3e1e0c6af4',1,'dialog::showDialog()'],['../classnpc.html#a2df7fa8edd23bc6b8148492b347d7763',1,'npc::showDialog()']]],
   ['showui',['showUi',['../classplayer.html#a1c7d037f90992e3e7273565f2e425c0a',1,'player']]],
   ['spiel',['spiel',['../classentity.html#aad60705310c034be7baa5cf8a3191df0',1,'entity']]],
   ['spieler',['spieler',['../classgame.html#ad73c522f88163b7e7fa303ce1bfc7030',1,'game']]],
