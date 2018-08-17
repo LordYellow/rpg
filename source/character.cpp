@@ -2,7 +2,7 @@
 #include "./../header/game.hpp"
 
 character::character(game* spiel, std::string kindOfTexture, int x, int y): entity(spiel, kindOfTexture, x, y) {
-    
+
 }
 
 void character::draw(){

@@ -11,15 +11,12 @@ void textureloader::renderTexture(int textureID, std::string kindOfTexture, SDL_
     if(!(this->textureMap.count(kindOfTexture))){
         this->textureMap[kindOfTexture] = SDL_CreateTextureFromSurface(this->renner, IMG_Load(kindOfTexture.c_str()));
     }
-    
     int w, h;
     SDL_QueryTexture(this->textureMap[kindOfTexture], NULL, NULL, &w, &h);
-    
     this->rectangle.x = (textureID % (w/width))*width;
     this->rectangle.y = ((textureID*width)/(w))*hight;
     this->rectangle.h = hight;
     this->rectangle.w = width;
-
     SDL_RenderCopy(this->renner, this->textureMap[kindOfTexture], &this->rectangle, &dst);
 }
 

@@ -18,14 +18,14 @@ game::~game(void){
 
 void game::update(){
     DEB_MSG_3("running")
-    
+
     SDL_SetRenderDrawColor(this->renner, 0, 0, 0, 0);
     SDL_RenderClear(this->renner);
-    
+
     this->map.draw();
     for(size_t i = 0; i < this->npcvector.size(); i++){this->npcvector[i].draw();}
     this->spieler.draw();
-    
+
     SDL_RenderPresent(this->renner);\
     SDL_Delay(1);
 }
@@ -38,7 +38,7 @@ void game::handleEvents(){
             case SDL_KEYUP: this->keys[this->event.key.keysym.sym] = 0; break;
         }
     }
-    
+
     switch(this->stateOfGame){
         case RUNNING:
             if(keys[SDLK_w]){(this->spieler).doMove(0,-1);}
@@ -48,7 +48,7 @@ void game::handleEvents(){
             if(keys[SDLK_e]){(this->spieler).interact();}
             break;
         case DIALOG:
-            
+
             break;
         default: break;
     }
