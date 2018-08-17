@@ -20,7 +20,7 @@ private:
     double ausdauer = 100;
     double gold = 0;
     double experience = 20;
-    double distanceToNpc(npc npcForDistance);
+    inline double distanceToNpc(npc* npcForDistance);
 };
 
 #endif

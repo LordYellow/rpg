@@ -1,22 +1,22 @@
 <map id="game" name="game">
-<area shape="rect" id="node1" title=" " alt="" coords="545,430,599,457"/>
-<area shape="rect" id="node10" href="$classentity.html" title=" " alt="" coords="403,527,458,553"/>
-<area shape="rect" id="node2" href="$classconfig.html" title=" " alt="" coords="547,326,605,353"/>
-<area shape="rect" id="node3" title=" " alt="" coords="430,200,567,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="518,430,573,457"/>
+<area shape="rect" id="node10" href="$classentity.html" title=" " alt="" coords="317,527,371,553"/>
+<area shape="rect" id="node2" href="$classconfig.html" title=" " alt="" coords="426,326,483,353"/>
+<area shape="rect" id="node3" title=" " alt="" coords="369,200,506,256"/>
 <area shape="rect" id="node4" title="STL class." alt="" coords="275,96,355,123"/>
 <area shape="rect" id="node11" href="$classdialog.html" title=" " alt="" coords="169,616,225,643"/>
 <area shape="rect" id="node5" title="STL class." alt="" coords="251,5,378,47"/>
-<area shape="rect" id="node6" title=" " alt="" coords="629,326,763,353"/>
-<area shape="rect" id="node7" title=" " alt="" coords="467,781,597,808"/>
-<area shape="rect" id="node8" href="$classnpc.html" title=" " alt="" coords="361,692,404,719"/>
-<area shape="rect" id="node9" href="$classcharacter.html" title=" " alt="" coords="393,616,469,643"/>
-<area shape="rect" id="node19" href="$classplayer.html" title=" " alt="" coords="483,692,541,719"/>
-<area shape="rect" id="node12" title="STL class." alt="" coords="53,527,147,553"/>
-<area shape="rect" id="node13" title="STL class." alt="" coords="27,423,160,464"/>
-<area shape="rect" id="node14" title="STL class." alt="" coords="25,319,154,360"/>
+<area shape="rect" id="node6" title=" " alt="" coords="508,326,641,353"/>
+<area shape="rect" id="node7" title=" " alt="" coords="410,781,539,808"/>
+<area shape="rect" id="node8" href="$classnpc.html" title=" " alt="" coords="323,692,365,719"/>
+<area shape="rect" id="node9" href="$classcharacter.html" title=" " alt="" coords="306,616,382,643"/>
+<area shape="rect" id="node19" href="$classplayer.html" title=" " alt="" coords="397,692,454,719"/>
+<area shape="rect" id="node12" title="STL class." alt="" coords="57,527,151,553"/>
+<area shape="rect" id="node13" title="STL class." alt="" coords="25,423,159,464"/>
+<area shape="rect" id="node14" title="STL class." alt="" coords="26,319,155,360"/>
 <area shape="rect" id="node15" title="STL class." alt="" coords="5,215,160,241"/>
 <area shape="rect" id="node16" title="STL class." alt="" coords="33,96,133,123"/>
-<area shape="rect" id="node17" href="$classkarte.html" title=" " alt="" coords="787,326,837,353"/>
-<area shape="rect" id="node18" href="$classtextureloader.html" title=" " alt="" coords="426,326,523,353"/>
-<area shape="rect" id="node20" href="$classui.html" title=" " alt="" coords="493,616,531,643"/>
+<area shape="rect" id="node17" href="$classkarte.html" title=" " alt="" coords="665,326,716,353"/>
+<area shape="rect" id="node18" href="$classtextureloader.html" title=" " alt="" coords="741,326,838,353"/>
+<area shape="rect" id="node20" href="$classui.html" title=" " alt="" coords="406,616,445,643"/>
 </map>

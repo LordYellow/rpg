@@ -37,7 +37,6 @@ public:
     karte map;
     player spieler;
     config configuration;
-    npc testnpc;
     std::vector<npc> npcvector;
 };
 

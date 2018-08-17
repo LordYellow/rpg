@@ -11,7 +11,7 @@ public:
     
     void showDialog();
     void update();
-private:
+
     bool displayDialog = false;
 };
 

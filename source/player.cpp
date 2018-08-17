@@ -1,5 +1,6 @@
 #include "./../header/player.hpp"
 #include "./../header/game.hpp"
+#include <math.h>
 
 player::player(game* spiel, std::string kindOfTexture, int x, int y): character(spiel, kindOfTexture, 0, 0){
     this->rectangle.x = std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2;
@@ -92,12 +93,23 @@ void player::showUi(){
     this->spiel->texture.writeText("12", this->goldrect, 40, this->color);
 }
 
-double player::distanceToNpc(npc npcForDistance){
-    
+inline double player::distanceToNpc(npc* npcForDistance){
+    return sqrt(pow((npcForDistance->getX() - this->getX()),2) + pow((npcForDistance->getY() - this->getY()),2));
 }
 
 void player::interact(){
+    int smallestDistance = 100, number;
+    for(size_t i = 0; i < this->spiel->npcvector.size(); i++){
+        double dst = this->distanceToNpc(&this->spiel->npcvector[i]);
+        DEB_MSG_3("distance " + _T(dst))
+        if(dst < smallestDistance){
+            smallestDistance = dst;
+            number = i;
+        }
+    }
     
-    
-    this->spiel->stateOfGame = DIALOG;
+    if(smallestDistance < 50){
+        this->spiel->npcvector[number].displayDialog = true;
+        this->spiel->stateOfGame = DIALOG;
+    }
 }
