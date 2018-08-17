@@ -30,6 +30,4 @@ void dialog::getMessageRows(){
     this->messageRow3 = stringarray[2];
 }
 
-std::string dialog::getMessageRow1(){
-    return this->messageRow1;
-}
+std::string dialog::getMessageRow1(){return this->messageRow1;}
