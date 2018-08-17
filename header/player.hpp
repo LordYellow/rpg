@@ -9,12 +9,13 @@ class player : public character, public ui{
 public:
     player(game* spiel, std::string kindOfTexture, int x, int y);
     player(void){}
-    
+
     void update();
     bool walkable(int x, int y);
     void doMove(int x, int y);
     void showUi();
-    void interact(); 
+    void interact();
+    int talkingto; 
 private:
     double life = 100;
     double ausdauer = 100;

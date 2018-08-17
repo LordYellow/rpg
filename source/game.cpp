@@ -31,6 +31,7 @@ void game::update(){
 }
 
 void game::handleEvents(){
+    this->lastaction = this->keys[SDLK_e];
     if(SDL_PollEvent(&this->event)){
         switch(this->event.type){
             case SDL_QUIT: this->stateOfGame = GAMEOVER; break;
@@ -45,10 +46,17 @@ void game::handleEvents(){
             if(keys[SDLK_s]){(this->spieler).doMove(0,1);}
             if(keys[SDLK_a]){(this->spieler).doMove(-1,0);}
             if(keys[SDLK_d]){(this->spieler).doMove(1,0);}
-            if(keys[SDLK_e]){(this->spieler).interact();}
+            if(keys[SDLK_e] && keys[SDLK_e] != lastaction){(this->spieler).interact();}
             break;
         case DIALOG:
-
+            if(keys[SDLK_e] && keys[SDLK_e] != lastaction){
+                this->npcvector[this->spieler.talkingto].getMessageRows();
+                if(this->npcvector[this->spieler.talkingto].getMessageRow1() == " "){
+                    this->npcvector[this->spieler.talkingto].displayDialog = false;
+                    this->npcvector[this->spieler.talkingto].currentPosition = 0;
+                    this->stateOfGame = RUNNING;
+                }
+            }
             break;
         default: break;
     }

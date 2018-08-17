@@ -10,14 +10,20 @@ class dialog{
 public:
     dialog(std::string dialogPath);
     dialog(void){}
-    
-    virtual void showDialog(bool fastItUp){}
-protected:
+
+    virtual void showDialog(){}
+    void getMessageRows();
+    std::string getMessageRow1();
     int currentPosition = 0;
-    std::string currentMessage;
+protected:
+    std::string currentMessage, messageRow1, messageRow2, messageRow3;
     std::ifstream readDialog;
     int numberOfLines;
     SDL_Rect dialogRect = {0,0,0,0};
+    SDL_Rect textRectRow1 = {0,0,200,50};
+    SDL_Rect textRectRow2 = {0,0,200,50};
+    SDL_Rect textRectRow3 = {0,0,200,50};
+    SDL_Color textColor = {0,0,0,0};
 };
 
 #endif

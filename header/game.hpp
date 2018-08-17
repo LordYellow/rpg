@@ -18,15 +18,15 @@ class game{
 public:
     game(void);
     ~game(void);
-    
+
     int getStateOfGame(){return this->stateOfGame;}
-    
+
     void update();
-    
+
     void handleEvents();
-    
+
     void load(const char* path);
-    
+
 public:
     int stateOfGame = RUNNING;
     SDL_Window *win;
@@ -38,6 +38,7 @@ public:
     player spieler;
     config configuration;
     std::vector<npc> npcvector;
+    bool lastaction = 0;
 };
 
 #endif

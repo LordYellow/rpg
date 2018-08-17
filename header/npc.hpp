@@ -8,7 +8,7 @@ class npc : public character, public dialog{
 public:
     npc(game* spiel, std::string kindOfTexture, std::string dialogPath, int x, int y);
     npc(void){}
-    
+     
     void showDialog();
     void update();
 
