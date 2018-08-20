@@ -2,18 +2,24 @@
 #include "./../header/game.hpp" // is this ok?
 #include <math.h>
 #include <fstream>
+#include <cerrno>
+#include <string>
+#include <cstring>
+#include <clocale>
 
 karte::karte(game* spiel, const char* path){
     this->spiel = spiel;
     this->rect.h = std::stoi(this->spiel->configuration["picsize"]);
     this->rect.w = std::stoi(this->spiel->configuration["picsize"]);
-    
+    this->mapID = path;
+
     std::ifstream readmap(path);
+    DEB_ERR(std::strerror(errno))
     if(!readmap.is_open()){DEB_ERR("Could not Open mapfile")}
-    
+
     char c;
     std::string cs;
-    
+
     std::vector<std::string> headline;
     //this will read the headline and store the information
     for(;;){readmap.get(c); if(c == '['){ break;}else{if(readmap.eof()) DEB_ERR("File ended without Headline declaration")}}
@@ -36,11 +42,11 @@ karte::karte(game* spiel, const char* path){
     DEB_MSG_1("Kartenname: " + headline[6])
     DEB_MSG_1("Kartentyp: " + headline[7])
     DEB_MSG_1("Colison Definition at: " + headline[8])
-    
+
     //now the important information of the headline will be stored
     int mapwidth = stoi(headline[3]), maphight = stoi(headline[4]), numberOfNumbers = stoi(headline[5]);
     std::vector<int> mapLine;
-    
+
     //now it will read the tile part of the mapfile
     try{
         for(;;){readmap.get(c); if(c == '#'){readmap.get(c); break;}else{if(readmap.eof()) DEB_ERR("File ended without Map declaration")}}
@@ -63,30 +69,30 @@ karte::karte(game* spiel, const char* path){
 
     this->width = mapwidth;
     this->hight = maphight;
-    
+
     if(this->width > std::stoi(this->spiel->configuration["width"])){
         this->cx = -(this->width-std::stoi(this->spiel->configuration["width"]))/2*std::stoi(this->spiel->configuration["picsize"]);
     }else{
         this->cx = (std::stoi(this->spiel->configuration["width"])-this->width)/2*std::stoi(this->spiel->configuration["picsize"]);
     }
-    
+
     if(this->hight > std::stoi(this->spiel->configuration["hight"])){
         this->cy = -(this->hight-std::stoi(this->spiel->configuration["hight"]))/2*std::stoi(this->spiel->configuration["picsize"]);
     }else{
         this->cy = (std::stoi(this->spiel->configuration["hight"])-this->hight)/2*std::stoi(this->spiel->configuration["picsize"]);
     }
-    
+
     DEB_MSG_1("cx: " + _T(this->cx) + " cy: " + _T(this->cy))
     DEB_MSG_1("picsize: " + _T(std::stoi(this->spiel->configuration["picsize"])))
     DEB_MSG_1("width: " + _T(std::stoi(this->spiel->configuration["width"])))
     DEB_MSG_1("hight: " + _T(std::stoi(this->spiel->configuration["hight"])))
-    
+
     //the following will set up the collision vector vector
     std::vector<uint8_t> collisionline;
     for(int i = 0; i < this->width+2; i++){collisionline.push_back(1);}
     this->collision.push_back(collisionline);
     collisionline.clear();
-    
+
     try{
         for(;;){readmap.get(c); if(c == headline[8][0]){readmap.get(c); break;}else if(readmap.eof()) DEB_ERR("File ended without Collision Declaration")}
         cs = "";
@@ -107,14 +113,35 @@ karte::karte(game* spiel, const char* path){
             collisionline.clear();
         }
     }catch(...){DEB_ERR("mapfile not valid")}
-    
+
     for(int i = 0; i < this->width+2; i++){collisionline.push_back(1);}
     this->collision.push_back(collisionline);
     collisionline.clear();
-    
+
     DEB_MSG_1("Collision Hight: " + _T(this->collision.size()))
     DEB_MSG_1("Collision Width: " + _T(this->collision[0].size()))
-    
+
+    try{
+        for(;;){readmap.get(c); if(c == '|'){readmap.get(c); break;}else{if(readmap.eof()){DEB_ERR("File ended without Transport declaration") readmap.close(); return;}}}
+        std::string nc1 = "", nc2 = "", nc3 = "";
+        while(c != '|'){
+            nc1 += c;
+            readmap.get(c);
+        }
+        c = ' ';
+        while(c != '|'){
+            nc2 += c;
+            readmap.get(c);
+        }
+        c = ' ';
+        while(c != '|'){
+            readmap.get(c);
+            if(c != '|') nc3 += c;
+        }
+        this->transportMap[std::stoi(nc1)*this->width+std::stoi(nc2)] = nc3;
+        DEB_MSG_1("Transport at " + _T(std::stoi(nc1)*this->width+std::stoi(nc2)) + " to " + this->transportMap[std::stoi(nc1)*this->width+std::stoi(nc2)])
+    }catch(...){DEB_ERR("mapfile not valid")}
+
     readmap.close();
 }
 

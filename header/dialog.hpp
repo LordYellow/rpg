@@ -15,10 +15,10 @@ public:
     void getMessageRows();
     std::string getMessageRow1();
     int currentPosition = 0;
+    double numberOfLettersToShow = 0;
 protected:
     std::string currentMessage, messageRow1, messageRow2, messageRow3;
     std::ifstream readDialog;
-    int numberOfLines;
     SDL_Rect dialogRect = {0,0,0,0};
     SDL_Rect textRectRow1 = {0,0,200,50};
     SDL_Rect textRectRow2 = {0,0,200,50};

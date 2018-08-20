@@ -13,11 +13,12 @@ public:
     void update();
     bool walkable(int x, int y);
     void doMove(int x, int y);
-    void showUi();
     void interact();
-    int talkingto; 
+    void showName();
+    int talkingto;
+    double getPx();
+    double getPy();
 private:
-    double life = 100;
     double ausdauer = 100;
     double gold = 0;
     double experience = 20;

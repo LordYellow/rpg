@@ -13,6 +13,7 @@
 #include "./textureloader.hpp"
 #include "./player.hpp"
 #include "./npc.hpp"
+#include "./enemy.hpp"
 
 class game{
 public:
@@ -38,6 +39,7 @@ public:
     player spieler;
     config configuration;
     std::vector<npc> npcvector;
+    std::vector<enemy> enemyvector;
     bool lastaction = 0;
 };
 

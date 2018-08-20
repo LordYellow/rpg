@@ -24,6 +24,7 @@ void game::update(){
 
     this->map.draw();
     for(size_t i = 0; i < this->npcvector.size(); i++){this->npcvector[i].draw();}
+    for(size_t i = 0; i < this->enemyvector.size(); i++){this->enemyvector[i].draw();}
     this->spieler.draw();
 
     SDL_RenderPresent(this->renner);\
@@ -47,14 +48,26 @@ void game::handleEvents(){
             if(keys[SDLK_a]){(this->spieler).doMove(-1,0);}
             if(keys[SDLK_d]){(this->spieler).doMove(1,0);}
             if(keys[SDLK_e] && keys[SDLK_e] != lastaction){(this->spieler).interact();}
+            if(keys[SDLK_SPACE]){
+                if(this->map.transportMap.count(this->spieler.getPx() + this->spieler.getPy() * this->map.width)){
+                    std::string s = this->map.transportMap[this->spieler.getPx() + this->spieler.getPy() * this->map.width];
+                    DEB_MSG_1(s)
+                    this->map = karte(this, s.c_str());
+                }
+            }
             break;
         case DIALOG:
             if(keys[SDLK_e] && keys[SDLK_e] != lastaction){
-                this->npcvector[this->spieler.talkingto].getMessageRows();
-                if(this->npcvector[this->spieler.talkingto].getMessageRow1() == " "){
-                    this->npcvector[this->spieler.talkingto].displayDialog = false;
-                    this->npcvector[this->spieler.talkingto].currentPosition = 0;
-                    this->stateOfGame = RUNNING;
+                if(this->npcvector[this->spieler.talkingto].numberOfLettersToShow >= 96){
+                    this->npcvector[this->spieler.talkingto].getMessageRows();
+                    this->npcvector[this->spieler.talkingto].numberOfLettersToShow = 0;
+                    if(this->npcvector[this->spieler.talkingto].getMessageRow1() == " "){
+                        this->npcvector[this->spieler.talkingto].displayDialog = false;
+                        this->npcvector[this->spieler.talkingto].currentPosition = 0;
+                        this->stateOfGame = RUNNING;
+                    }
+                }else{
+                    this->npcvector[this->spieler.talkingto].numberOfLettersToShow = 96;
                 }
             }
             break;
@@ -63,8 +76,9 @@ void game::handleEvents(){
 }
 
 void game::load(const char* path){
-    this->map = karte(this, "./maps/testmap");
+    this->map = karte(this, "./maps/testmap2");
     this->texture = textureloader(this->renner, this);
     this->spieler = player(this, "./resources/player.png", -100,-50);
-    this->npcvector.push_back(npc(this, "./resources/player.png", "./testdialog",200,500));
+    this->npcvector.push_back(npc(this, "./resources/player.png", "./testdialog",200,500, "Arnold Schwarzenegger", "./maps/testmap2"));
+    this->enemyvector.push_back(enemy(this, "./resources/player.png", 100, 200, "Stalin", "./maps/cave"));
 }

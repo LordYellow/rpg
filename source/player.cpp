@@ -2,7 +2,7 @@
 #include "./../header/game.hpp"
 #include <math.h>
 
-player::player(game* spiel, std::string kindOfTexture, int x, int y): character(spiel, kindOfTexture, 0, 0){
+player::player(game* spiel, std::string kindOfTexture, int x, int y): character(spiel, kindOfTexture, 0, 0, " ", "PLAYER"){
     this->rectangle.x = std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2;
     this->rectangle.y = std::stoi(this->spiel->configuration["screenhight"])/2-std::stoi(this->spiel->configuration["playerHight"])/2;
     this->rectangle.w = std::stoi(this->spiel->configuration["playerWidth"]);
@@ -26,35 +26,10 @@ player::player(game* spiel, std::string kindOfTexture, int x, int y): character(
 }
 
 void player::update(){
-    //the player doesnt need a update function, cause his movement is handelt by another function (doMove). Because of that i decided to put the ui stuff in there
-    this->showUi();
+    //the player doesnt need a update function now
 }
 
-void player::doMove(int x, int y){
-    if(x == 0){
-        this->direction = ((y>0)?0:3);
-    }else{
-        this->direction = ((x>0)?2:1);
-    }
-
-    this->spiel->map.changecxcy(x*std::stoi(this->spiel->configuration["speed"]), y*std::stoi(this->spiel->configuration["speed"]));
-
-    if(!this->walkable(x, y)){
-        this->spiel->map.changecxcy(-x*std::stoi(this->spiel->configuration["speed"]), -y*std::stoi(this->spiel->configuration["speed"]));
-    }
-    this->animation+=0.1;
-}
-
-bool player::walkable(int x, int y){
-    //working
-    double px = round((std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2)/std::stoi(this->spiel->configuration["picsize"]) - (this->spiel->map.cx)/std::stoi(this->spiel->configuration["picsize"]));
-    double py = round((std::stoi(this->spiel->configuration["screenhight"])/2-std::stoi(this->spiel->configuration["playerHight"])/2)/std::stoi(this->spiel->configuration["picsize"]) - this->spiel->map.cy/std::stoi(this->spiel->configuration["picsize"])) +1;
-    uint8_t ptw = this->spiel->map.getCollisionValue(px+1, py+1);
-
-    return !ptw;
-}
-
-void player::showUi(){
+void player::showName(){
     this->spiel->texture.renderTexture(0,this->spiel->configuration["uiTexture"],this->texturerect, 78, 232);
 
     //lifebar
@@ -91,6 +66,39 @@ void player::showUi(){
     this->color.g = 168;
     this->color.b = 0;
     this->spiel->texture.writeText("12", this->goldrect, 40, this->color);
+}
+
+void player::doMove(int x, int y){
+    if(x == 0){
+        this->direction = ((y>0)?0:3);
+    }else{
+        this->direction = ((x>0)?2:1);
+    }
+
+    this->spiel->map.changecxcy(x*std::stoi(this->spiel->configuration["speed"]), y*std::stoi(this->spiel->configuration["speed"]));
+
+    if(!this->walkable(x, y)){
+        this->spiel->map.changecxcy(-x*std::stoi(this->spiel->configuration["speed"]), -y*std::stoi(this->spiel->configuration["speed"]));
+    }
+    this->animation+=0.1;
+}
+
+double player::getPx(){
+    return round((std::stoi(this->spiel->configuration["screenwidth"])/2-std::stoi(this->spiel->configuration["playerWidth"])/2)/std::stoi(this->spiel->configuration["picsize"]) - (this->spiel->map.cx)/std::stoi(this->spiel->configuration["picsize"]));
+}
+
+double player::getPy(){
+    return round((std::stoi(this->spiel->configuration["screenhight"])/2-std::stoi(this->spiel->configuration["playerHight"])/2)/std::stoi(this->spiel->configuration["picsize"]) - this->spiel->map.cy/std::stoi(this->spiel->configuration["picsize"])) +1;
+
+}
+
+bool player::walkable(int x, int y){
+    //working
+    double px = this->getPx();
+    double py = this->getPy();
+    uint8_t ptw = this->spiel->map.getCollisionValue(px+1, py+1);
+
+    return !ptw;
 }
 
 inline double player::distanceToNpc(npc* npcForDistance){

@@ -17,7 +17,7 @@ protected:
     SDL_Rect rectangle;
     game* spiel;
     std::string kindOfTexture;
-    int x, y;
+    double x, y;
 };
 
 #endif
