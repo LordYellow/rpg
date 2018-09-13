@@ -12,7 +12,7 @@ void textureloader::renderTexture(int textureID, std::string kindOfTexture, SDL_
         this->textureMap[kindOfTexture] = SDL_CreateTextureFromSurface(this->renner, IMG_Load(kindOfTexture.c_str()));
     }
     int w, h;
-    SDL_QueryTexture(this->textureMap[kindOfTexture], NULL, NULL, &w, &h);
+    SDL_QueryTexture(this->textureMap[kindOfTexture], nullptr, nullptr, &w, &h);
     this->rectangle.x = (textureID % (w/width))*width;
     this->rectangle.y = ((textureID*width)/(w))*hight;
     this->rectangle.h = hight;
@@ -26,7 +26,7 @@ void textureloader::drawRectangle(SDL_Rect dst, SDL_Color color, bool fill){
 }
 
 void textureloader::writeText(std::string message, SDL_Rect dst, int fontSize, SDL_Color color){
-    TTF_Font *font = TTF_OpenFont("./resources/Ubuntu Mono derivative Powerline Bold.ttf", fontSize);
+    TTF_Font *font = TTF_OpenFont("./../resources/Ubuntu Mono derivative Powerline Bold.ttf", fontSize);
     if(font == nullptr){std::cout << TTF_GetError() << std::endl; return;}
     SDL_Surface *surf = TTF_RenderText_Blended(font, message.c_str(), color);
     if(surf == nullptr){std::cout << "surfaceeror" << std::endl; TTF_CloseFont(font); return;}
@@ -34,6 +34,6 @@ void textureloader::writeText(std::string message, SDL_Rect dst, int fontSize, S
     if(text == nullptr){std::cout << "textureerror" << std::endl;}
     SDL_FreeSurface(surf);
     TTF_CloseFont(font);
-    SDL_QueryTexture(text, NULL, NULL, &dst.w, &dst.h);
-    SDL_RenderCopy(this->renner, text, NULL, &dst);
+    SDL_QueryTexture(text, nullptr, nullptr, &dst.w, &dst.h);
+    SDL_RenderCopy(this->renner, text, nullptr, &dst);
 }

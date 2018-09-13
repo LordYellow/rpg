@@ -1,6 +1,6 @@
 #include "./../header/game.hpp"
 
-game::game(void){
+game::game(){
     //SDL init stuff
     if(SDL_Init(SDL_INIT_VIDEO) != 0){std::cout << "error: " << SDL_GetError() << std::endl; return;}
     if(TTF_Init() != 0){std::cout << "error" << std::endl; SDL_Quit(); return;}
@@ -10,7 +10,7 @@ game::game(void){
     if(renner == nullptr){SDL_DestroyWindow(this->win); std::cout << "renderererror: " << SDL_GetError() << std::endl; SDL_Quit(); return;}
 }
 
-game::~game(void){
+game::~game(){
     SDL_DestroyRenderer(this->renner);
     SDL_DestroyWindow(this->win);
     SDL_Quit();
@@ -23,8 +23,8 @@ void game::update(){
     SDL_RenderClear(this->renner);
 
     this->map.draw();
-    for(size_t i = 0; i < this->npcvector.size(); i++){this->npcvector[i].draw();}
-    for(size_t i = 0; i < this->enemyvector.size(); i++){this->enemyvector[i].draw();}
+    for (auto &i : this->npcvector) { i.draw();}
+    for (auto &i : this->enemyvector) { i.draw();}
     this->spieler.draw();
 
     SDL_RenderPresent(this->renner);\
@@ -76,9 +76,9 @@ void game::handleEvents(){
 }
 
 void game::load(const char* path){
-    this->map = karte(this, "./maps/testmap2");
+    this->map = karte(this, "./../maps/testmap2");
     this->texture = textureloader(this->renner, this);
-    this->spieler = player(this, "./resources/player.png", -100,-50);
-    this->npcvector.push_back(npc(this, "./resources/player.png", "./testdialog",200,500, "Arnold Schwarzenegger", "./maps/testmap2"));
-    this->enemyvector.push_back(enemy(this, "./resources/player.png", 100, 200, "Stalin", "./maps/cave"));
+    this->spieler = player(this, "./../resources/player.png", -100,-50);
+    this->npcvector.emplace_back(this, "./../resources/player.png", "./../testdialog",200,500, "Arnold Schwarzenegger", "./../maps/testmap2");
+    this->enemyvector.emplace_back(this, "./../resources/player.png", 100, 200, "Stalin", "./../maps/cave");
 }

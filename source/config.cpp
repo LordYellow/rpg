@@ -2,7 +2,7 @@
 #include <fstream>
 
 config::config(){
-    std::ifstream readconfig("./configfile");
+    std::ifstream readconfig("./../configfile");
     if(!(readconfig.is_open())) DEB_ERR("Could not Open config file")
     char c;
     std::string cs1, cs2;
